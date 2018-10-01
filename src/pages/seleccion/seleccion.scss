@@ -1,0 +1,23 @@
+page-seleccion {
+  ion-content{
+    text-align: center;
+  }
+  ion-card.card{
+    position: absolute;
+    margin-top: 30%;
+    border-radius: 8px;
+    background-color: #ececec;
+  }
+  .logo{
+    background-image: url('../assets/logo.png') !important;
+    background-repeat: no-repeat !important;
+    height: 6em !important;
+    background-position: center !important;
+  }
+  .ng-progress{
+    margin-top:70px;
+  }
+  .bar-shadow{
+    display: none;
+  }
+}

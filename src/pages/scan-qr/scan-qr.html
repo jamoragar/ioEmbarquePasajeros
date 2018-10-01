@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Escanear Código QR</ion-title>
+    <button ion-button icon-only menuToggle end>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content no-bounce>
+
+  <ion-card style="margin-top: 25%;">
+    <ion-card-content>
+      <ion-card-title style="text-align: center;margin: 0 0 3rem 0;">Escanee el código QR de la Tarjeta de Embarque</ion-card-title>
+      <button style="height:8rem; transition:none; font-size:2.4rem; border-radius: 30px;"
+              ion-button block color="Broom"
+              (click)="prueba($event)">REALIZAR SCAN QR
+              <ion-icon name="barcode"></ion-icon>
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="progress-wrapper">
+    <div class="current" [ngStyle]="getOverlayStyle()">{{ current }}/{{ max }}</div>
+
+    <round-progress
+      [current]="current"
+      [max]="max"
+      [stroke]="stroke"
+      [radius]="radius"
+      [semicircle]="semicircle"
+      [rounded]="rounded"
+      [responsive]="responsive"
+      [clockwise]="clockwise"
+      [color]="gradient ? 'url(#gradient)' : color"
+      [background]="background"
+      [duration]="duration"
+      [animation]="animation"
+      [animationDelay]="animationDelay"></round-progress>
+  </div>
+</ion-content>

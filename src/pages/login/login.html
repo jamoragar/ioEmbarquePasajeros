@@ -1,0 +1,21 @@
+<ion-content class="background">
+  <ion-card>
+    <form (submit)="loginApp()">
+      <ion-card-header>
+        <div class="logo"></div>
+      </ion-card-header>
+      <ion-card-content>
+
+        <ion-list no-line>
+          <ion-item>
+            <ion-input [(ngModel)]="credenciales.username" autocapitalize="off" name="username" type="text" placeholder="Nombre de Usuario"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input [(ngModel)]="credenciales.password" autocapitalize="off" name="password" type="password" placeholder="Contraseña"></ion-input>
+          </ion-item>
+        </ion-list>
+        <button ion-button block outline color="light" type="submit">Ingresar</button>
+      </ion-card-content>
+    </form>
+  </ion-card>
+</ion-content>

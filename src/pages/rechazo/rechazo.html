@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>PASAJERO RECHAZADO</ion-title>
+    <button ion-button icon-only menuToggle end>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <ion-card-header><ion-icon name="close"></ion-icon></ion-card-header>
+    <ion-card-content>
+      <ion-card-title><strong>DATOS INVALIDOS</strong></ion-card-title>
+      <ion-list>
+        <ion-item>
+          <p style="font-size: 1.1em;" align="center">
+            PASAJERO NO PUEDE<br>EMBARCAR
+          </p>
+          <br>
+          <p style="font-size: 1em;" align="center">
+            MOTIVO:
+          </p>
+          <br>
+          <p align="center" style="font-size: 0.9em;">
+            Viaje o datos personales incorrectos
+          </p>
+          <br>
+          <p align="center" style="font-size: 0.9em;">
+            REMITIR PASAJERO A<br>TERMINAL.
+          </p>
+        </ion-item>
+        <ion-item>
+          <br><br>
+          <button style="height:8rem; transition:none; font-size:2.4rem; border-radius: 30px;"
+                  ion-button full color="Broom"
+                  (click)="siguientePasajero()">SIGUIENTE PASAJERO</button>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

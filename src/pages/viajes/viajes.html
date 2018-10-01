@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Selección de Viaje</ion-title>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding no-bounce>
+
+<ion-list>
+ <h4 *ngIf="Viaje.destino == null">Seleccione el Origen del tramo.</h4>
+ <ion-item *ngIf="Viaje.destino == null">
+   <ion-label style="font-size:2rem">ORIGEN</ion-label>
+   <!-- Ante la seleccion del item, se envia al controlador el parametro del ngModel para correr el codigo -->
+   <ion-select #selectOrigenes
+               [(ngModel)]="Viaje.origen" name="origen"
+               interface="action-sheet"
+               submitText="Aceptar" cancelText="Cancelar"
+               (ionChange)="onSelectChange(Viaje.origen)"
+               (ionChange)="abrirDestino()">
+     <ion-option *ngFor="let origen of origenes">{{ origen.nombre_sitio }}</ion-option>
+   </ion-select>
+ </ion-item>
+ <h4 *ngIf="Viaje.destino == null && Viaje.origen != null">Seleccione el Destino del tramo.</h4>
+ <ion-item *ngIf="Viaje.destino == null && Viaje.origen != null">
+   <ion-label style="font-size:2rem">DESTINO</ion-label>
+   <ion-select  #selectDestino
+                [(ngModel)]="Viaje.destino" name="destino"
+                interface="action-sheet"
+                submitText="Aceptar" cancelText="Cancelar"
+                (ionChange)="buscarCruce(Viaje.destino)">
+    <ion-option *ngFor="let destino of destinos">{{ destino.nombre_sitio }}</ion-option>
+   </ion-select>
+ </ion-item>
+<h1 *ngIf="Viaje.destino != null">Seleccione uno de los siguientes tramos</h1>
+ <ion-card *ngFor="let cruce of cruces; let i = index" (click)="seleccionTramo(cruce, Viaje.origen, Viaje.destino)">
+   <ion-card-content *ngIf="i < 2">
+     <ion-card-title>Fecha: {{cruce.horario_cruce | date :"dd/MM/yyyy 'Cruce:' h:mma ":"+0000"}}</ion-card-title>
+     <h2>{{Viaje.origen}} -> {{Viaje.destino}}</h2>
+     <h2>Presentación: {{cruce.horario_presentacion | date: 'h:mma ':'+0000'}}</h2>
+     <h3>Nave: {{cruce.nombre_nave}}</h3>
+   </ion-card-content>
+ </ion-card>
+ <ion-item style="position: absolute; bottom:0; margin-left: -15px;"
+           *ngIf="Viaje.destino!= null">
+   <button style="height: 6rem;transition: none;font-size: 2rem;"
+           ion-button full color="danger"
+           (click)="limpiarBusqueda()">
+    CANCELAR<ion-icon name="trash"></ion-icon>
+  </button>
+ </ion-item>
+</ion-list>
+
+
+</ion-content>
