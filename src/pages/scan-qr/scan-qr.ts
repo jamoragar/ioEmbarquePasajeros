@@ -1,5 +1,5 @@
-import { Component, NgZone, ViewChild } from '@angular/core';
-import { NavController, NavParams, LoadingController, ToastController, Events, Content, Platform } from 'ionic-angular';
+import { Component } from '@angular/core';
+import { NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 //Importamos el plugin para Escanear Codigo QR
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 // Importamos Servicio Rest para validacion de codigo QR
@@ -9,10 +9,10 @@ import { RechazoPage } from "../rechazo/rechazo";
 import { AprobacionPage } from "../aprobacion/aprobacion";
 
 //importamos el scanner nuevo de qr
-import { CmbscannerProvider, Settings } from '../../providers/cmbscanner/cmbscanner';
+// import { CmbscannerProvider, Settings } from '../../providers/cmbscanner/cmbscanner';
 
 
-declare var cmbScanner:any;
+// declare var cmbScanner:any;
 
 @Component({
   selector: 'page-scan-qr',
@@ -37,13 +37,13 @@ export class ScanQrPage {
   gradient: boolean = false;
   realCurrent: number = 0;
 
-  @ViewChild(Content) content: Content;
-  scannerActive:string ="barcode";
-  public removeBtn : boolean;
-  public connected : boolean;
-  private settings : Settings;
-  triggerMode : string = "analytics";
-  list_data : any[] = [];
+  // @ViewChild(Content) content: Content;
+  // scannerActive:string ="barcode";
+  // public removeBtn : boolean;
+  // public connected : boolean;
+  // private settings : Settings;
+  // triggerMode : string = "analytics";
+  // list_data : any[] = [];
 
   tramo:any;
   data = {tipo_ticket:'', id_ticket:'', id_cruce:'', id_tramo:'', val_seed:''};
@@ -55,44 +55,44 @@ export class ScanQrPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private barcodeScanner: BarcodeScanner, public restService: RestServiceProvider,
-              public loadingCtrl: LoadingController, private toastCtrl: ToastController, private zone: NgZone,
-              public cmbScannerProvider: CmbscannerProvider, private platform: Platform, public events: Events) {
+              public loadingCtrl: LoadingController, private toastCtrl: ToastController,
+              ) {
 
                 //subscribe to events so we can update our model whenever the connectionState changes
-                events.subscribe('connection:changed', (connectionState) => {
-                  if(connectionState == 2){
-                    this.zone.run(() => {
-                      this.connected = true;
-                    });
-                  }
-                  else{
-                    this.zone.run(() => {
-                      this.connected = false;
-                    });
-                  }
-                });
-                platform.ready().then(() => {
-                  this.removeBtn = (this.list_data.length > 0) ? false : true;
-                  this.cmbScannerProvider.config().then(data => {
-                    this.settings= this.cmbScannerProvider.getSettings();
-                      this.triggerMode = "crop";
-                    this.list_data = data.list;
-                    cmbScanner.setActiveStartScanningCallback(scannerState => {
-                      if(scannerState){
-                        this.zone.run(() => {
-                          this.scannerActive = "power";
-                        });
-                      }
-                      else{
-                        this.zone.run(() => {
-                          this.scannerActive = "barcode";
-                        });
-                      }
-                    });
-                    cmbScanner.setResultCallback( result => {
-                        // Proceso de escaneo y validación de código QR
-                        this.presentLoading();
-                        this.procesaDataQR(result.readString);
+                // events.subscribe('connection:changed', (connectionState) => {
+                //   if(connectionState == 2){
+                //     this.zone.run(() => {
+                //       this.connected = true;
+                //     });
+                //   }
+                //   else{
+                //     this.zone.run(() => {
+                //       this.connected = false;
+                //     });
+                //   }
+                // });
+                // platform.ready().then(() => {
+                //   this.removeBtn = (this.list_data.length > 0) ? false : true;
+                //   this.cmbScannerProvider.config().then(data => {
+                //     this.settings= this.cmbScannerProvider.getSettings();
+                //       this.triggerMode = "crop";
+                //     this.list_data = data.list;
+                //     cmbScanner.setActiveStartScanningCallback(scannerState => {
+                //       if(scannerState){
+                //         this.zone.run(() => {
+                //           this.scannerActive = "power";
+                //         });
+                //       }
+                //       else{
+                //         this.zone.run(() => {
+                //           this.scannerActive = "barcode";
+                //         });
+                //       }
+                //     });
+                    // cmbScanner.setResultCallback( result => {
+                    //     // Proceso de escaneo y validación de código QR
+                    //     this.presentLoading();
+                    //     this.procesaDataQR(result.readString);
                        // else if(splittedQR[0] == '4'){
                        //   this.dataVehiculo = {tipo_ticket:splittedQR[0], id_ticket:splittedQR[1], id_reserva:splittedQR[2], id_cruce:splittedQR[9], id_tramo:splittedQR[3], id_vehiculo:splittedQR[4], patente:splittedQR[5], val_seed:splittedQR[10]};
                        //   if(this.cantPasajeros == 'Sin conexión'){
@@ -130,18 +130,18 @@ export class ScanQrPage {
                        //   }
                        // }
 
-                        this.zone.run(() => {
-                          if(result.readString){
-                          this.cmbScannerProvider.setResultItem(result);
-                          this.list_data = this.cmbScannerProvider.data;
-                          this.content.scrollToBottom();
-                          }
-                        });
-                    });
-                  });
-                });
-  }
-
+                //         this.zone.run(() => {
+                //           if(result.readString){
+                //           this.cmbScannerProvider.setResultItem(result);
+                //           this.list_data = this.cmbScannerProvider.data;
+                //           this.content.scrollToBottom();
+                //           }
+                //         });
+                //     });
+                //   });
+                // });
+  // }
+}
   scanOpenSourceQR(){
    this.barcodeScanner.scan().then((barcodeData) => {
      this.procesaDataQR(barcodeData.text);
@@ -165,9 +165,9 @@ export class ScanQrPage {
     };
   }
   //Una vez que entramos a la pantalla, este código se ejecuta
-  ionViewDidEnter(){
-  this.settings.triggerType = 2;
-}
+//   ionViewDidEnter(){
+//   this.settings.triggerType = 2;
+// }
 //Cuando se va a enetrar a la pantalla, este código se ejecuta.
   ionViewWillEnter(){
     this.tramo = this.navParams.data;
@@ -187,18 +187,18 @@ export class ScanQrPage {
         this.max = this.tramo.cruce.cupo_pasajeros_maximo;
         this.current = resultado;
       }
-      cmbScanner.registerSDK("oHrl9VmG/SfX7gLccuwXtD+kmR55JoVxhlRfSIhnhvs=");
-      this.cmbScannerProvider.cmbScanner.setTriggerType(2).then(result =>{
-        //need to update buttons based on the trigger type
-        if(result.status){
-          this.cmbScannerProvider.setSettingsItem('triggerType',result.trigger);
-        }
-      });
+      // cmbScanner.registerSDK("oHrl9VmG/SfX7gLccuwXtD+kmR55JoVxhlRfSIhnhvs=");
+      // this.cmbScannerProvider.cmbScanner.setTriggerType(2).then(result =>{
+      //   //need to update buttons based on the trigger type
+      //   if(result.status){
+      //     this.cmbScannerProvider.setSettingsItem('triggerType',result.trigger);
+      //   }
+      // });
 
-      this.platform.ready().then(() => {
-        this.cmbScannerProvider.setSettingsItem('previewContainer',[0,0,100,65]);
-        this.settings = this.cmbScannerProvider.getSettings();
-      });
+      // this.platform.ready().then(() => {
+      //   this.cmbScannerProvider.setSettingsItem('previewContainer',[0,0,100,65]);
+      //   this.settings = this.cmbScannerProvider.getSettings();
+      // });
     });
   }
 //Función que crea un 'cargando...' y la llamamos cuando sea necesario
@@ -234,53 +234,54 @@ export class ScanQrPage {
     toast.present();
   }
 //función que enciende o apaga la camara con la analítica de escaneo de código QR
-  startStopScanner(event){
-    this.cmbScannerProvider.cmbScanner.setTriggerType(2).then(result =>{
-      //need to update buttons based on the trigger type
-      if(result.status){
-        this.cmbScannerProvider.setSettingsItem('triggerType',result.trigger);
-      }
-    });
-    if(this.scannerActive == 'barcode')
-      this.cmbScannerProvider.start();
-    else
-      this.cmbScannerProvider.stop();
-  }
+  // startStopScanner(event){
+  //   this.cmbScannerProvider.cmbScanner.setTriggerType(2).then(result =>{
+  //     //need to update buttons based on the trigger type
+  //     if(result.status){
+  //       this.cmbScannerProvider.setSettingsItem('triggerType',result.trigger);
+  //     }
+  //   });
+  //   if(this.scannerActive == 'barcode')
+  //     this.cmbScannerProvider.start();
+  //   else
+  //     this.cmbScannerProvider.stop();
+  // }
 
-  changeTriggerMode(){
-    if(this.settings.triggerType == 5){
-      this.cmbScannerProvider.cmbScanner.setTriggerType(2).then(result =>{
-        //need to update buttons based on the trigger type
-        if(result.status){
-          this.cmbScannerProvider.setSettingsItem('triggerType',result.trigger);
-        }
-      });
-    }
-    else{
-      this.cmbScannerProvider.cmbScanner.setTriggerType(5).then(result =>{
-        //need to update buttons based on the trigger type
-        console.log(JSON.stringify(result));
-        if(result.status){
-          this.cmbScannerProvider.setSettingsItem('triggerType',result.trigger);
-            let toast = this.toastCtrl.create({
-              message: 'Trigger mode changed to Continuous',
-              duration: 2000,
-              position: 'top'
-            });
-
-            toast.onDidDismiss(() => {
-              console.log('Dismissed toast');
-            });
-
-            toast.present();
-        }
-      });
-    }
-  }
-  prueba(){
-    let dataxxx = '1&36235&7402&1871107392';
-    this.navCtrl.setRoot(AprobacionPage, {dataQR:dataxxx, tramo:this.tramo});
-  }
+  // changeTriggerMode(){
+  //   if(this.settings.triggerType == 5){
+  //     this.cmbScannerProvider.cmbScanner.setTriggerType(2).then(result =>{
+  //       //need to update buttons based on the trigger type
+  //       if(result.status){
+  //         this.cmbScannerProvider.setSettingsItem('triggerType',result.trigger);
+  //       }
+  //     });
+  //   }
+  //   else{
+  //     this.cmbScannerProvider.cmbScanner.setTriggerType(5).then(result =>{
+  //       //need to update buttons based on the trigger type
+  //       console.log(JSON.stringify(result));
+  //       if(result.status){
+  //         this.cmbScannerProvider.setSettingsItem('triggerType',result.trigger);
+  //           let toast = this.toastCtrl.create({
+  //             message: 'Trigger mode changed to Continuous',
+  //             duration: 2000,
+  //             position: 'top'
+  //           });
+  //
+  //           toast.onDidDismiss(() => {
+  //             console.log('Dismissed toast');
+  //           });
+  //
+  //           toast.present();
+  //       }
+  //     });
+  //   }
+  // }
+  // prueba(){
+  //   let dataxxx = '20&36235&7402&1871108392';
+  //   let spliit = dataxxx.split("&");
+  //   this.navCtrl.setRoot(RechazoPage, {dataQR:spliit, tramo:this.tramo, resultado:0});
+  // }
   // Proceso de escaneo y validación de código QR
   procesaDataQR(data){
     this.presentLoading();
@@ -329,11 +330,11 @@ export class ScanQrPage {
               console.log('ERROR');
             }
             else{
-              if(this.tramo.cruce.id_cruce == this.dataVehiculo.id_cruce && this.resultadoSQL.resultado != 16){
+              if(this.tramo.cruce.id_cruce == this.dataVehiculo.id_cruce && this.resultadoSQL.resultado == 8){
                 this.navCtrl.setRoot(AprobacionPage, {dataQR:splittedQR, tramo:this.tramo});
               }
               else{
-                this.navCtrl.setRoot(RechazoPage, this.tramo);
+                this.navCtrl.setRoot(RechazoPage, {dataQR:splittedQR, tramo:this.tramo, resultado:this.resultadoSQL.resultado});
               }
             }
           });
@@ -421,11 +422,11 @@ export class ScanQrPage {
 
   //Validamos los datos del tramo seleccionado vs la data del QR de pasajero
   aprobarRechazarTicketPersona(splittedQR){
-    if(this.tramo.cruce.id_cruce == this.data.id_cruce && this.resultadoSQL.resultado != 16){
+    if(this.tramo.cruce.id_cruce == this.data.id_cruce && this.resultadoSQL.resultado == 8){
       this.navCtrl.setRoot(AprobacionPage, {dataQR:splittedQR, tramo:this.tramo});
     }
     else{
-      this.navCtrl.setRoot(RechazoPage, this.tramo);
+      this.navCtrl.setRoot(RechazoPage, {resultado:this.resultadoSQL.resultado, tramo:this.tramo, dataQR:splittedQR});
     }
     console.log("Validación exitosa de ticket");
   }

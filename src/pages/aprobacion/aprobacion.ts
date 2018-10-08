@@ -42,7 +42,7 @@ export class AprobacionPage {
     setTimeout(() =>{
       this.navCtrl.setRoot(ScanQrPage, this.tramo);
 
-    },3500);
+    },2500);
   }
   //Inovocamos al procedimiento almacenado al momento de cargar la pagina
   ionViewWillEnter(){

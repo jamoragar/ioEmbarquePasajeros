@@ -12,9 +12,15 @@ import { ScanQrPage } from "../scan-qr/scan-qr";
 })
 export class RechazoPage {
   tramo:any;
+  dataQR:any;
+  resultado:number;
+  titulo:string;
+  motivo:string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-                this.tramo = this.navParams.data;
+                this.tramo = this.navParams.data.tramo;
+                this.resultado = this.navParams.data.resultado;
+                this.dataQR = this.navParams.data.dataQR;
                 console.log(this.tramo);
 
                 //Reproducción de audio de rechazo al entrar a la página.
@@ -23,9 +29,27 @@ export class RechazoPage {
                 audio.load();
                 audio.play();
   }
-
+  ionViewDidEnter(){
+    if(this.dataQR[0] == 1 || this.dataQR[0] == 17){
+      this.titulo = 'PASAJERO';
+      this.procesaMotivo(this.resultado);
+    }
+    else{
+      this.titulo = 'VEHÍCULO';
+      this.procesaMotivo(this.resultado);
+    }
+  }
   siguientePasajero(){
     this.navCtrl.setRoot(ScanQrPage, this.tramo);
+  }
+  procesaMotivo(codigoResultado){
+    if(codigoResultado == 0){
+      this.motivo = 'TICKET INVÁLIDO.';
+    }
+    else{
+      this.motivo = 'TICKET YA UTILIZADO';
+    }
+    return this.motivo;
   }
 
 }
