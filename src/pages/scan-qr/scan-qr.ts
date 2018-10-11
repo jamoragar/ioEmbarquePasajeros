@@ -37,14 +37,6 @@ export class ScanQrPage {
   gradient: boolean = false;
   realCurrent: number = 0;
 
-  // @ViewChild(Content) content: Content;
-  // scannerActive:string ="barcode";
-  // public removeBtn : boolean;
-  // public connected : boolean;
-  // private settings : Settings;
-  // triggerMode : string = "analytics";
-  // list_data : any[] = [];
-
   tramo:any;
   data = {tipo_ticket:'', id_ticket:'', id_cruce:'', id_tramo:'', val_seed:''};
   dataVehiculo = {tipo_ticket:'', id_ticket:'', id_cruce:'', id_tramo:'', val_seed:''};
@@ -56,92 +48,8 @@ export class ScanQrPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private barcodeScanner: BarcodeScanner, public restService: RestServiceProvider,
               public loadingCtrl: LoadingController, private toastCtrl: ToastController,
-              ) {
+              ) {}
 
-                //subscribe to events so we can update our model whenever the connectionState changes
-                // events.subscribe('connection:changed', (connectionState) => {
-                //   if(connectionState == 2){
-                //     this.zone.run(() => {
-                //       this.connected = true;
-                //     });
-                //   }
-                //   else{
-                //     this.zone.run(() => {
-                //       this.connected = false;
-                //     });
-                //   }
-                // });
-                // platform.ready().then(() => {
-                //   this.removeBtn = (this.list_data.length > 0) ? false : true;
-                //   this.cmbScannerProvider.config().then(data => {
-                //     this.settings= this.cmbScannerProvider.getSettings();
-                //       this.triggerMode = "crop";
-                //     this.list_data = data.list;
-                //     cmbScanner.setActiveStartScanningCallback(scannerState => {
-                //       if(scannerState){
-                //         this.zone.run(() => {
-                //           this.scannerActive = "power";
-                //         });
-                //       }
-                //       else{
-                //         this.zone.run(() => {
-                //           this.scannerActive = "barcode";
-                //         });
-                //       }
-                //     });
-                    // cmbScanner.setResultCallback( result => {
-                    //     // Proceso de escaneo y validación de código QR
-                    //     this.presentLoading();
-                    //     this.procesaDataQR(result.readString);
-                       // else if(splittedQR[0] == '4'){
-                       //   this.dataVehiculo = {tipo_ticket:splittedQR[0], id_ticket:splittedQR[1], id_reserva:splittedQR[2], id_cruce:splittedQR[9], id_tramo:splittedQR[3], id_vehiculo:splittedQR[4], patente:splittedQR[5], val_seed:splittedQR[10]};
-                       //   if(this.cantPasajeros == 'Sin conexión'){
-                       //     //Tomamos la fecha del cruce y la manipulamos para quitar la hora de la variable, y así poder compararla con la fecha del codigo QR de la Tarjeta de Embarque
-                       //
-                       //
-                       //     if(this.tramo.cruce.id_tramo == this.data.id_tramo && this.navParams.data.cruce.id_cruce == this.data.id_cruce){
-                       //       this.navCtrl.setRoot(AprobacionPage, {dataQR:splittedQR, tramo:this.tramo});
-                       //     }
-                       //     else{
-                       //       this.navCtrl.setRoot(RechazoPage, this.tramo);
-                       //     }
-                       //   }
-                       //   else{
-                       //     this.restService.postValTicketVehiculo(this.dataVehiculo).then(dataSP =>{
-                       //       console.log(dataSP);
-                       //       if(dataSP['name'] === 'HttpErrorResponse'){
-                       //         this.presentToast();
-                       //         console.log("Existe error");
-                       //       }
-                       //       else{
-                       //         this.resultadoSQL = dataSP[0];
-                       //         console.log(this.resultadoSQL);
-                       //         //Tomamos la fecha del cruce y la manipulamos para quitar la hora de la variable, y así poder compararla con la fecha del codigo QR de la Tarjeta de Embarque
-                       //
-                       //
-                       //         if(this.tramo.cruce.id_tramo == this.data.id_tramo && this.navParams.data.cruce.id_cruce == this.data.id_cruce){
-                       //            this.navCtrl.setRoot(AprobacionPage, {dataQR:splittedQR, tramo:this.tramo});
-                       //          }
-                       //          else{
-                       //            this.navCtrl.setRoot(RechazoPage, this.tramo);
-                       //          }
-                       //        }
-                       //     });
-                       //   }
-                       // }
-
-                //         this.zone.run(() => {
-                //           if(result.readString){
-                //           this.cmbScannerProvider.setResultItem(result);
-                //           this.list_data = this.cmbScannerProvider.data;
-                //           this.content.scrollToBottom();
-                //           }
-                //         });
-                //     });
-                //   });
-                // });
-  // }
-}
   scanOpenSourceQR(){
    this.barcodeScanner.scan().then((barcodeData) => {
      this.procesaDataQR(barcodeData.text);
@@ -149,7 +57,12 @@ export class ScanQrPage {
       console.log(err);
     });
   }
-
+/*   scanOpenSourceQR(){
+    let codigoQR;
+    codigoQR = "20&66772&7470&11179433";
+    codigoQR = "17&72233&7470&15242958";
+    this.procesaDataQR(codigoQR);
+  } */
   getOverlayStyle() {
     let isSemi = this.semicircle;
     let transform = (isSemi ? '' : 'translateY(-50%) ') + 'translateX(-50%)';
@@ -164,10 +77,7 @@ export class ScanQrPage {
       'font-size': this.radius / 3.5 + 'px'
     };
   }
-  //Una vez que entramos a la pantalla, este código se ejecuta
-//   ionViewDidEnter(){
-//   this.settings.triggerType = 2;
-// }
+
 //Cuando se va a enetrar a la pantalla, este código se ejecuta.
   ionViewWillEnter(){
     this.tramo = this.navParams.data;
@@ -187,18 +97,6 @@ export class ScanQrPage {
         this.max = this.tramo.cruce.cupo_pasajeros_maximo;
         this.current = resultado;
       }
-      // cmbScanner.registerSDK("oHrl9VmG/SfX7gLccuwXtD+kmR55JoVxhlRfSIhnhvs=");
-      // this.cmbScannerProvider.cmbScanner.setTriggerType(2).then(result =>{
-      //   //need to update buttons based on the trigger type
-      //   if(result.status){
-      //     this.cmbScannerProvider.setSettingsItem('triggerType',result.trigger);
-      //   }
-      // });
-
-      // this.platform.ready().then(() => {
-      //   this.cmbScannerProvider.setSettingsItem('previewContainer',[0,0,100,65]);
-      //   this.settings = this.cmbScannerProvider.getSettings();
-      // });
     });
   }
 //Función que crea un 'cargando...' y la llamamos cuando sea necesario
@@ -233,56 +131,7 @@ export class ScanQrPage {
     });
     toast.present();
   }
-//función que enciende o apaga la camara con la analítica de escaneo de código QR
-  // startStopScanner(event){
-  //   this.cmbScannerProvider.cmbScanner.setTriggerType(2).then(result =>{
-  //     //need to update buttons based on the trigger type
-  //     if(result.status){
-  //       this.cmbScannerProvider.setSettingsItem('triggerType',result.trigger);
-  //     }
-  //   });
-  //   if(this.scannerActive == 'barcode')
-  //     this.cmbScannerProvider.start();
-  //   else
-  //     this.cmbScannerProvider.stop();
-  // }
 
-  // changeTriggerMode(){
-  //   if(this.settings.triggerType == 5){
-  //     this.cmbScannerProvider.cmbScanner.setTriggerType(2).then(result =>{
-  //       //need to update buttons based on the trigger type
-  //       if(result.status){
-  //         this.cmbScannerProvider.setSettingsItem('triggerType',result.trigger);
-  //       }
-  //     });
-  //   }
-  //   else{
-  //     this.cmbScannerProvider.cmbScanner.setTriggerType(5).then(result =>{
-  //       //need to update buttons based on the trigger type
-  //       console.log(JSON.stringify(result));
-  //       if(result.status){
-  //         this.cmbScannerProvider.setSettingsItem('triggerType',result.trigger);
-  //           let toast = this.toastCtrl.create({
-  //             message: 'Trigger mode changed to Continuous',
-  //             duration: 2000,
-  //             position: 'top'
-  //           });
-  //
-  //           toast.onDidDismiss(() => {
-  //             console.log('Dismissed toast');
-  //           });
-  //
-  //           toast.present();
-  //       }
-  //     });
-  //   }
-  // }
-  // prueba(){
-  //   let dataxxx = '20&36235&7402&1871108392';
-  //   let spliit = dataxxx.split("&");
-  //   this.navCtrl.setRoot(RechazoPage, {dataQR:spliit, tramo:this.tramo, resultado:0});
-  // }
-  // Proceso de escaneo y validación de código QR
   procesaDataQR(data){
     this.presentLoading();
     this.dataQR = data;
@@ -293,7 +142,7 @@ export class ScanQrPage {
       case '1':{ //Pasajero
         this.procesaPasajero(splittedQR);
         //Validamos el Ticket
-        if(this.cantPasajeros == 'Sin conexión'){
+        if(this.cantPasajeros  == 'Sin conexión'){
 
         }
         else{
@@ -302,7 +151,8 @@ export class ScanQrPage {
             this.resultadoSQL = dataSP[0];
             if(dataSP['name'] === 'HttpErrorResponse'){
               this.presentToast(1);
-              console.log("Error");
+              console.log("ERROR");
+              return;
             }
             else if(this.resultadoSQL.resultado == 8){
               this.aprobarRechazarTicketPersona(splittedQR);
@@ -329,13 +179,11 @@ export class ScanQrPage {
               this.presentToast(1);
               console.log('ERROR');
             }
-            else{
-              if(this.tramo.cruce.id_cruce == this.dataVehiculo.id_cruce && this.resultadoSQL.resultado == 8){
+            else if(this.tramo.cruce.id_cruce == this.dataVehiculo.id_cruce && this.resultadoSQL.resultado == 8){
                 this.navCtrl.setRoot(AprobacionPage, {dataQR:splittedQR, tramo:this.tramo});
               }
-              else{
-                this.navCtrl.setRoot(RechazoPage, {dataQR:splittedQR, tramo:this.tramo, resultado:this.resultadoSQL.resultado});
-              }
+            else{
+              this.navCtrl.setRoot(RechazoPage, {dataQR:splittedQR, tramo:this.tramo, resultado:this.resultadoSQL.resultado});
             }
           });
         }
@@ -349,7 +197,7 @@ export class ScanQrPage {
           this.navCtrl.setRoot(AprobacionPage, {dataQR:splittedQR, tramo:this.tramo});
         }
         else{
-          this.navCtrl.setRoot(RechazoPage, this.tramo);
+          this.navCtrl.setRoot(RechazoPage, {dataQR:splittedQR, tramo: this.tramo});
         }
         break;
       }
@@ -361,7 +209,7 @@ export class ScanQrPage {
           this.navCtrl.setRoot(AprobacionPage, {dataQR:splittedQR, tramo:this.tramo});
         }
         else{
-          this.navCtrl.setRoot(RechazoPage, this.tramo);
+          this.navCtrl.setRoot(RechazoPage, {dataQR:splittedQR, tramo: this.tramo});
         }
         break;
       }
@@ -370,42 +218,6 @@ export class ScanQrPage {
         break;
       }
     }
-   // else if(splittedQR[0] == '4'){
-   //   this.dataVehiculo =
-   //   if(this.cantPasajeros == 'Sin conexión'){
-   //     //Tomamos la fecha del cruce y la manipulamos para quitar la hora de la variable, y así poder compararla con la fecha del codigo QR de la Tarjeta de Embarque
-   //
-   //
-   //     if(this.tramo.cruce.id_tramo == this.data.id_tramo && this.navParams.data.cruce.id_cruce == this.data.id_cruce){
-   //       this.navCtrl.setRoot(AprobacionPage, {dataQR:splittedQR, tramo:this.tramo});
-   //     }
-   //     else{
-   //       this.navCtrl.setRoot(RechazoPage, this.tramo);
-   //     }
-   //   }
-   //   else{
-   //     this.restService.postValTicketVehiculo(this.dataVehiculo).then(dataSP =>{
-   //       console.log(dataSP);
-   //       if(dataSP['name'] === 'HttpErrorResponse'){
-   //         this.presentToast();
-   //         console.log("Existe error");
-   //       }
-   //       else{
-   //         this.resultadoSQL = dataSP[0];
-   //         console.log(this.resultadoSQL);
-   //         //Tomamos la fecha del cruce y la manipulamos para quitar la hora de la variable, y así poder compararla con la fecha del codigo QR de la Tarjeta de Embarque
-   //
-   //
-   //         if(this.tramo.cruce.id_tramo == this.data.id_tramo && this.navParams.data.cruce.id_cruce == this.data.id_cruce){
-   //            this.navCtrl.setRoot(AprobacionPage, {dataQR:splittedQR, tramo:this.tramo});
-   //          }
-   //          else{
-   //            this.navCtrl.setRoot(RechazoPage, this.tramo);
-   //          }
-   //        }
-   //     });
-   //   }
-   // }
   }
 
   procesaPasajero(dataQRpasajero){
@@ -432,11 +244,14 @@ export class ScanQrPage {
   }
   validationSeed(id_ticket:number, id_cruce:number, tipo_ticket:number){
     var valSeed;
-    if(tipo_ticket = 17){
+    if(tipo_ticket == 17){
       valSeed = ( ( ( (id_ticket - 17) * 22 - id_cruce) * (id_ticket - (tipo_ticket * 7) ) ) / (id_cruce + 11) );
+      console.log("ValSeed: "+Math.trunc(valSeed));
     }
     else{
       valSeed = ( ( ( (id_ticket - 13) * 19 - id_cruce) * (id_ticket - (tipo_ticket * 17) ) ) / (id_cruce + 23) );
+      console.log("ValSeed: "+Math.trunc(valSeed));
+      
     }
     return Math.trunc(valSeed);
   }

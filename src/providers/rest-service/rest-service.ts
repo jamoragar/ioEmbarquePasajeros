@@ -9,6 +9,7 @@ export class RestServiceProvider {
   //Ip Local servidor Tabsa
    // apiURL = 'http://192.168.50.185:24500';
   apiURL = 'http://ventas.tabsa.cl:24500';
+  // apiURL = 'http://localhost:24500';
 
   constructor(public http: HttpClient) {}
 
@@ -119,5 +120,15 @@ export class RestServiceProvider {
       });
     });
   }
+  postBuscarReserva(criterioBusqueda){
+  return new Promise(resolve =>{
+    this.http.post(this.apiURL + '/buscarReserva', criterioBusqueda).subscribe(data =>{
+      resolve(data);
+    }, err =>{
+      console.log(err);
+      resolve(err);
+    });
+  });
+}
 
 }

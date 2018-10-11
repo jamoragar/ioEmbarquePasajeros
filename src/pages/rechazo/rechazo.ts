@@ -20,6 +20,7 @@ export class RechazoPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
                 this.tramo = this.navParams.data.tramo;
                 this.resultado = this.navParams.data.resultado;
+                console.log("Resultado: "+this.resultado);
                 this.dataQR = this.navParams.data.dataQR;
                 console.log(this.tramo);
 
@@ -46,8 +47,11 @@ export class RechazoPage {
     if(codigoResultado == 0){
       this.motivo = 'TICKET INVÁLIDO.';
     }
-    else{
+    else if(codigoResultado == 16){
       this.motivo = 'TICKET YA UTILIZADO';
+    }
+    else{
+      this.motivo = 'PASAJE VENDIDO DE MANERA OFF-LINE';
     }
     return this.motivo;
   }
