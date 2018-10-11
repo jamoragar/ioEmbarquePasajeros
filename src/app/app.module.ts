@@ -26,7 +26,6 @@ import { IonicStorageModule } from '@ionic/storage';
 //providers
 import { StorageServiceProvider } from '../providers/storage-service/storage-service';
 import { RestServiceProvider } from '../providers/rest-service/rest-service';
-import { CmbscannerProvider } from '../providers/cmbscanner/cmbscanner';
 //Importando Modulo
 import {RoundProgressModule} from 'angular-svg-round-progressbar';
 
@@ -76,8 +75,7 @@ import {RoundProgressModule} from 'angular-svg-round-progressbar';
     Md5,
     RestServiceProvider,
     StorageServiceProvider,
-    IonicStorageModule,
-    CmbscannerProvider
+    IonicStorageModule
 
   ]
 })
