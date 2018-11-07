@@ -25,6 +25,8 @@ export class AprobacionPage {
                 this.dataQR = this.navParams.data.dataQR;
                 console.log('Tramo: '+JSON.stringify(this.tramo));
                 console.log('DataQR: '+JSON.stringify(this.dataQR));
+                console.log('Switch: '+JSON.stringify(this.navParams.data.switch));
+                
                 //Reproducción de audio de aprobación al entrar a la página.
                 let audio = new Audio();
                 audio.src = "assets/audio/pasajero_embarcado.mp3";
@@ -40,9 +42,9 @@ export class AprobacionPage {
       this.titulo = 'VEHÍCULO'
     }
     setTimeout(() =>{
-      this.navCtrl.setRoot(ScanQrPage, this.tramo);
+      this.navCtrl.setRoot(ScanQrPage, {tramo:this.tramo, switch: this.navParams.data.switch});
 
-    },2500);
+    },2250);
   }
   //Inovocamos al procedimiento almacenado al momento de cargar la pagina
   ionViewWillEnter(){
@@ -76,12 +78,15 @@ export class AprobacionPage {
     let mensaje:string;
     let toast = this.toastCtrl.create({
       message: 'ATENCIÓN: Ticket generado de manera offline. Es válido, pero no existe reserva asociada.',
-      duration: 2000,
+      duration: 1600,
       position: 'top'
     });
     toast.onDidDismiss(() => {
       console.log('Dismissed toast');
     });
     toast.present();
+  }
+  changeSwitch(){
+    this.navParams.data.switch = false;
   }
 }

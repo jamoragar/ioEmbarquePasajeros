@@ -36,6 +36,7 @@ var AprobacionPage = /** @class */ (function () {
         this.dataQR = this.navParams.data.dataQR;
         console.log('Tramo: ' + JSON.stringify(this.tramo));
         console.log('DataQR: ' + JSON.stringify(this.dataQR));
+        console.log('Switch: ' + JSON.stringify(this.navParams.data.switch));
         //Reproducción de audio de aprobación al entrar a la página.
         var audio = new Audio();
         audio.src = "assets/audio/pasajero_embarcado.mp3";
@@ -51,8 +52,8 @@ var AprobacionPage = /** @class */ (function () {
             this.titulo = 'VEHÍCULO';
         }
         setTimeout(function () {
-            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__scan_qr_scan_qr__["a" /* ScanQrPage */], _this.tramo);
-        }, 2500);
+            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__scan_qr_scan_qr__["a" /* ScanQrPage */], { tramo: _this.tramo, switch: _this.navParams.data.switch });
+        }, 2250);
     };
     //Inovocamos al procedimiento almacenado al momento de cargar la pagina
     AprobacionPage.prototype.ionViewWillEnter = function () {
@@ -82,7 +83,7 @@ var AprobacionPage = /** @class */ (function () {
         var mensaje;
         var toast = this.toastCtrl.create({
             message: 'ATENCIÓN: Ticket generado de manera offline. Es válido, pero no existe reserva asociada.',
-            duration: 2000,
+            duration: 1600,
             position: 'top'
         });
         toast.onDidDismiss(function () {
@@ -90,14 +91,17 @@ var AprobacionPage = /** @class */ (function () {
         });
         toast.present();
     };
+    AprobacionPage.prototype.changeSwitch = function () {
+        this.navParams.data.switch = false;
+    };
     AprobacionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-aprobacion',template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\aprobacion\aprobacion.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>PASAJERO VALIDADO</ion-title>\n    <button ion-button icon-only menuToggle end>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <ion-card>\n    <ion-card-header><ion-icon name="checkmark"></ion-icon></ion-card-header>\n    <ion-card-content>\n      <ion-card-title><strong>{{titulo}} EMBARCADO</strong></ion-card-title>\n      <ion-list>\n        <ion-item>\n          <p style="font-size: 1.1em;" align="center">\n            {{titulo}}\n          </p>\n          <br>\n          <p style="font-size: 1.1em;" align="center">\n            EMBARCADO CON ÉXITO\n          </p>\n        </ion-item>\n      </ion-list>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\aprobacion\aprobacion.html"*/,
+            selector: 'page-aprobacion',template:/*ion-inline-start:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/pages/aprobacion/aprobacion.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>PASAJERO VALIDADO</ion-title>\n    <button ion-button icon-only menuToggle end>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <ion-card>\n    <ion-card-header><ion-icon name="checkmark"></ion-icon></ion-card-header>\n    <ion-card-content>\n      <ion-card-title><strong>{{titulo}} EMBARCADO</strong></ion-card-title>\n      <ion-list>\n        <ion-item>\n          <p style="font-size: 1.1em;" align="center">\n            {{titulo}}\n          </p>\n          <br>\n          <p style="font-size: 1.1em;" align="center">\n            EMBARCADO CON ÉXITO\n          </p>\n        </ion-item>\n      </ion-list>\n    </ion-card-content>\n  </ion-card>\n  <ion-item style="bottom:0; position:absolute;">\n    <button ion-button block color="danger"\n            style="height:6rem; border-radius: 8px; font-size: 2rem;"\n            (click)="changeSwitch()">Detener Escaneo Continuo</button>\n  </ion-item>\n</ion-content>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/pages/aprobacion/aprobacion.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__["a" /* RestServiceProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__["a" /* RestServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__["a" /* RestServiceProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]) === "function" && _d || Object])
     ], AprobacionPage);
     return AprobacionPage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=aprobacion.js.map
@@ -167,7 +171,7 @@ var RechazoPage = /** @class */ (function () {
     };
     RechazoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-rechazo',template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\rechazo\rechazo.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>PASAJERO RECHAZADO</ion-title>\n    <button ion-button icon-only menuToggle end>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <ion-card>\n    <ion-card-header><ion-icon name="close"></ion-icon></ion-card-header>\n    <ion-card-content>\n      <ion-card-title><strong>DATOS INVALIDOS</strong></ion-card-title>\n      <ion-list>\n        <ion-item>\n          <p style="font-size: 1.1em;" align="center">\n            <b>{{titulo}}</b> NO PUEDE<br>EMBARCAR!\n          </p>\n          <br><br>\n          <p style="font-size: 1em;" align="center">\n            MOTIVO:\n          </p>\n          <br>\n          <p align="center" style="font-size: 0.9em;">\n            <b>{{motivo}}</b><br><br>\n            REMITIR PASAJERO A<br>TERMINAL.\n          </p>\n        </ion-item>\n        <ion-item>\n          <br><br>\n          <button style="height:8rem; transition:none; font-size:2.4rem; border-radius: 30px;"\n                  ion-button full color="Broom"\n                  (click)="siguientePasajero()">SIGUIENTE PASAJERO</button>\n        </ion-item>\n      </ion-list>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\rechazo\rechazo.html"*/,
+            selector: 'page-rechazo',template:/*ion-inline-start:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/pages/rechazo/rechazo.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>PASAJERO RECHAZADO</ion-title>\n    <button ion-button icon-only menuToggle end>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <ion-card>\n    <ion-card-header><ion-icon name="close"></ion-icon></ion-card-header>\n    <ion-card-content>\n      <ion-card-title><strong>DATOS INVALIDOS</strong></ion-card-title>\n      <ion-list>\n        <ion-item>\n          <p style="font-size: 1.1em;" align="center">\n            <b>{{titulo}}</b> NO PUEDE<br>EMBARCAR!\n          </p>\n          <br><br>\n          <p style="font-size: 1em;" align="center">\n            MOTIVO:\n          </p>\n          <br>\n          <p align="center" style="font-size: 0.9em;">\n            <b>{{motivo}}</b><br><br>\n            REMITIR PASAJERO A<br>TERMINAL.\n          </p>\n        </ion-item>\n        <ion-item>\n          <br><br>\n          <button style="height:8rem; transition:none; font-size:2.4rem; border-radius: 30px;"\n                  ion-button full color="Broom"\n                  (click)="siguientePasajero()">SIGUIENTE PASAJERO</button>\n        </ion-item>\n      </ion-list>\n    </ion-card-content>\n  </ion-card>\n  <ion-item style="bottom:0; position:absolute;">\n      <button ion-button block color="danger"\n              style="height:6rem; border-radius: 8px; font-size: 2rem;"\n              (click)="changeSwitch()">Detener Escaneo Continuo</button>\n    </ion-item>\n</ion-content>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/pages/rechazo/rechazo.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
     ], RechazoPage);
@@ -230,7 +234,7 @@ var AyudaPage = /** @class */ (function () {
     };
     AyudaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-ayuda',template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\ayuda\ayuda.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Ayuda</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-slides pager>\n\n    <!-- Código para crear slides -->\n      <ion-slide *ngFor="let slide of slides">\n        <ion-toolbar>\n\n          <ion-buttons end>\n            <button ion-button color="primary"\n                    (click)="saltar_ayuda()">Saltar</button>\n          </ion-buttons>\n\n        </ion-toolbar>\n\n        <img [src]="slide.image" class="slide-image"/>\n        <h2 class="slide-title" [innerHTML]="slide.title"></h2>\n        <p [innerHTML]="slide.description"></p>\n      </ion-slide>\n      <!-- Fin del ngFor -->\n\n      <!-- Ultimo Slide -->\n      <ion-slide>\n        <ion-toolbar>\n        </ion-toolbar>\n\n        <img src="assets/imgs/ica-slidebox-img-4.png" class="slide-image"/>\n        <h2 class="slide-title">¿Listo para empezar?</h2>\n\n        <button ion-button large clear icon-right color="primary"\n                (click)="saltar_ayuda()">\n          Continuar\n          <ion-icon name="arrow-forward"></ion-icon>\n        </button>\n\n      </ion-slide>\n      <!-- Fin del último slide -->\n\n    </ion-slides>\n\n\n</ion-content>\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\ayuda\ayuda.html"*/,
+            selector: 'page-ayuda',template:/*ion-inline-start:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/pages/ayuda/ayuda.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Ayuda</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-slides pager>\n\n    <!-- Código para crear slides -->\n      <ion-slide *ngFor="let slide of slides">\n        <ion-toolbar>\n\n          <ion-buttons end>\n            <button ion-button color="primary"\n                    (click)="saltar_ayuda()">Saltar</button>\n          </ion-buttons>\n\n        </ion-toolbar>\n\n        <img [src]="slide.image" class="slide-image"/>\n        <h2 class="slide-title" [innerHTML]="slide.title"></h2>\n        <p [innerHTML]="slide.description"></p>\n      </ion-slide>\n      <!-- Fin del ngFor -->\n\n      <!-- Ultimo Slide -->\n      <ion-slide>\n        <ion-toolbar>\n        </ion-toolbar>\n\n        <img src="assets/imgs/ica-slidebox-img-4.png" class="slide-image"/>\n        <h2 class="slide-title">¿Listo para empezar?</h2>\n\n        <button ion-button large clear icon-right color="primary"\n                (click)="saltar_ayuda()">\n          Continuar\n          <ion-icon name="arrow-forward"></ion-icon>\n        </button>\n\n      </ion-slide>\n      <!-- Fin del último slide -->\n\n    </ion-slides>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/pages/ayuda/ayuda.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* MenuController */]])
     ], AyudaPage);
@@ -375,7 +379,7 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\login\login.html"*/'<ion-content class="background">\n  <ion-card>\n    <form (submit)="loginApp()">\n      <ion-card-header>\n        <div class="logo"></div>\n      </ion-card-header>\n      <ion-card-content>\n\n        <ion-list no-line>\n          <ion-item>\n            <ion-input [(ngModel)]="credenciales.username" autocapitalize="off" name="username" type="text" placeholder="Nombre de Usuario"></ion-input>\n          </ion-item>\n          <ion-item>\n            <ion-input [(ngModel)]="credenciales.password" autocapitalize="off" name="password" type="password" placeholder="Contraseña"></ion-input>\n          </ion-item>\n        </ion-list>\n        <button ion-button block outline color="light" type="submit">Ingresar</button>\n      </ion-card-content>\n    </form>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\login\login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/pages/login/login.html"*/'<ion-content class="background">\n  <ion-card>\n    <form (submit)="loginApp()">\n      <ion-card-header>\n        <div class="logo"></div>\n      </ion-card-header>\n      <ion-card-content>\n\n        <ion-list no-line>\n          <ion-item>\n            <ion-input [(ngModel)]="credenciales.username" autocapitalize="off" name="username" type="text" placeholder="Nombre de Usuario"></ion-input>\n          </ion-item>\n          <ion-item>\n            <ion-input [(ngModel)]="credenciales.password" autocapitalize="off" name="password" type="password" placeholder="Contraseña"></ion-input>\n          </ion-item>\n        </ion-list>\n        <button ion-button block outline color="light" type="submit">Ingresar</button>\n      </ion-card-content>\n    </form>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/pages/login/login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* MenuController */], __WEBPACK_IMPORTED_MODULE_4__providers_rest_service_rest_service__["a" /* RestServiceProvider */],
@@ -449,7 +453,7 @@ var PasajerosEmbarcadosPage = /** @class */ (function () {
     };
     PasajerosEmbarcadosPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-pasajeros-embarcados',template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\pasajeros-embarcados\pasajeros-embarcados.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Pasajeros Embarcados</ion-title>\n    <button ion-button icon-only menuToggle end>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n    <ion-item *ngIf="pasajeros == null">\n      <h1>Aún no ha seleccionado<br>un tramo.</h1>\n      <br>\n      <h2>Debe seleccionar un tramo, para<br>poder ver la lista de pasajeros<br>embarcados.</h2>\n    </ion-item>\n  </ion-card>\n  <ion-card *ngIf="pasajeros != null">\n    <ion-card-title><strong>Pasajeros Embarcados</strong></ion-card-title>\n    <ion-list>\n      <ion-item *ngFor="let pasajero of pasajeros; let i=index">\n        <b>{{i + 1}}) </b>\n        <b>Nombre</b>: {{pasajero.nombre}} {{pasajero.apellido}}\n        <br>\n        <b>ID de Reserva</b>: {{pasajero.id_reserva}}\n      </ion-item>\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\pasajeros-embarcados\pasajeros-embarcados.html"*/,
+            selector: 'page-pasajeros-embarcados',template:/*ion-inline-start:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/pages/pasajeros-embarcados/pasajeros-embarcados.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Pasajeros Embarcados</ion-title>\n    <button ion-button icon-only menuToggle end>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n    <ion-item *ngIf="pasajeros == null">\n      <h1>Aún no ha seleccionado<br>un tramo.</h1>\n      <br>\n      <h2>Debe seleccionar un tramo, para<br>poder ver la lista de pasajeros<br>embarcados.</h2>\n    </ion-item>\n  </ion-card>\n  <ion-card *ngIf="pasajeros != null">\n    <ion-card-title><strong>Pasajeros Embarcados</strong></ion-card-title>\n    <ion-list>\n      <ion-item *ngFor="let pasajero of pasajeros; let i=index">\n        <b>{{i + 1}}) </b>\n        <b>Nombre</b>: {{pasajero.nombre}} {{pasajero.apellido}}\n        <br>\n        <b>ID de Reserva</b>: {{pasajero.id_reserva}}\n      </ion-item>\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/pages/pasajeros-embarcados/pasajeros-embarcados.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* MenuController */],
             __WEBPACK_IMPORTED_MODULE_2__providers_rest_service_rest_service__["a" /* RestServiceProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]])
@@ -580,7 +584,7 @@ var ResumenPage = /** @class */ (function () {
         });
         loading.present();
         setTimeout(function () {
-            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__scan_qr_scan_qr__["a" /* ScanQrPage */], _this.tramo);
+            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__scan_qr_scan_qr__["a" /* ScanQrPage */], { tramo: _this.tramo });
         }, 1300);
         setTimeout(function () {
             loading.dismiss();
@@ -588,12 +592,12 @@ var ResumenPage = /** @class */ (function () {
     };
     ResumenPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-resumen',template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\resumen\resumen.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Resumen Viaje Elegido</ion-title>\n    <button ion-button icon-only menuToggle end>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding no-bounce>\n  <ion-list no-border style="margin-top:0;">\n\n    <ion-item>\n      <ion-icon name=\'calendar\' item-start></ion-icon>\n      Fecha:\n      <ion-note item-end>\n        {{ tramo.cruce.horario_cruce | date: "dd/MM/yyyy" }}\n      </ion-note>\n    </ion-item>\n    <ion-item>\n      <ion-icon name=\'clock\' item-start></ion-icon>\n      Hora:\n      <ion-note item-end>\n      {{ tramo.cruce.horario_cruce | date: "h:mma":\'+0000\' }}\n      </ion-note>\n    </ion-item>\n    <ion-item>\n      <ion-icon name=\'boat\' item-start></ion-icon>\n      Nave:\n      <ion-note item-end>\n      {{ tramo.cruce.nombre_nave }}\n      </ion-note>\n    </ion-item>\n    <ion-item>\n      <ion-icon name=\'locate\' item-start></ion-icon>\n      Origen:\n      <ion-note item-end>\n      {{ tramo.origen }}\n      </ion-note>\n    </ion-item>\n    <ion-item>\n      <ion-icon name=\'map\' item-start></ion-icon>\n      Destino:\n      <ion-note item-end>\n      {{ tramo.destino }}\n      </ion-note>\n    </ion-item>\n    <ion-card>\n      <ion-card-content>\n        <ion-card-title>Este viaje es correcto?</ion-card-title>\n        <button ion-button block style="font-size:2rem; height:6rem;"\n                color="Broom"\n                (click)="viajeCorrecto()">Confirmar\n                <ion-icon name="checkmark-circle"></ion-icon>\n        </button>\n        <button ion-button block style="font-size:2rem; height:6rem; margin-top:1rem;"\n                color="danger"\n                (click)="viajeIncorrecto()">CANCELAR\n                <ion-icon name="close-circle"></ion-icon>\n\n        </button>\n      </ion-card-content>\n    </ion-card>\n\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\resumen\resumen.html"*/,
+            selector: 'page-resumen',template:/*ion-inline-start:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/pages/resumen/resumen.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Resumen Viaje Elegido</ion-title>\n    <button ion-button icon-only menuToggle end>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding no-bounce>\n  <ion-list no-border style="margin-top:0;">\n\n    <ion-item>\n      <ion-icon name=\'calendar\' item-start></ion-icon>\n      Fecha:\n      <ion-note item-end>\n        {{ tramo.cruce.horario_cruce | date: "dd/MM/yyyy" }}\n      </ion-note>\n    </ion-item>\n    <ion-item>\n      <ion-icon name=\'clock\' item-start></ion-icon>\n      Hora:\n      <ion-note item-end>\n      {{ tramo.cruce.horario_cruce | date: "h:mma":\'+0000\' }}\n      </ion-note>\n    </ion-item>\n    <ion-item>\n      <ion-icon name=\'boat\' item-start></ion-icon>\n      Nave:\n      <ion-note item-end>\n      {{ tramo.cruce.nombre_nave }}\n      </ion-note>\n    </ion-item>\n    <ion-item>\n      <ion-icon name=\'locate\' item-start></ion-icon>\n      Origen:\n      <ion-note item-end>\n      {{ tramo.origen }}\n      </ion-note>\n    </ion-item>\n    <ion-item>\n      <ion-icon name=\'map\' item-start></ion-icon>\n      Destino:\n      <ion-note item-end>\n      {{ tramo.destino }}\n      </ion-note>\n    </ion-item>\n    <ion-card>\n      <ion-card-content>\n        <ion-card-title>Este viaje es correcto?</ion-card-title>\n        <button ion-button block style="font-size:2rem; height:6rem;"\n                color="Broom"\n                (click)="viajeCorrecto()">Confirmar\n                <ion-icon name="checkmark-circle"></ion-icon>\n        </button>\n        <button ion-button block style="font-size:2rem; height:6rem; margin-top:1rem;"\n                color="danger"\n                (click)="viajeIncorrecto()">CANCELAR\n                <ion-icon name="close-circle"></ion-icon>\n\n        </button>\n      </ion-card-content>\n    </ion-card>\n\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/pages/resumen/resumen.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]) === "function" && _c || Object])
     ], ResumenPage);
     return ResumenPage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=resumen.js.map
@@ -828,7 +832,7 @@ var PasajerosPendientesPage = /** @class */ (function () {
     };
     PasajerosPendientesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-pasajeros-pendientes',template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\pasajeros-pendientes\pasajeros-pendientes.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Lista de Pasajeros</ion-title>\n    <button ion-button icon-only menuToggle end>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n    <ion-item *ngIf="pasajeros == null">\n      <h1>Aún no ha seleccionado<br>un tramo.</h1>\n      <br>\n      <h2>Debe seleccionar un tramo, para<br>poder ver la lista de pasajeros<br>por embarcar.</h2>\n    </ion-item>\n  </ion-card>\n  <ion-card *ngIf="pasajeros != null">\n    <ion-card-title><strong>Pasajeros por Embarcar</strong></ion-card-title>\n    <ion-list>\n      <ion-item *ngFor="let pasajero of pasajeros; let i=index">\n        <b>{{i + 1}}) </b>\n        <b>Nombre</b>: {{pasajero.nombre}} {{pasajero.apellido}}\n        <br>\n        <b>ID de Reserva</b>: {{pasajero.id_reserva}}\n      </ion-item>\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\pasajeros-pendientes\pasajeros-pendientes.html"*/,
+            selector: 'page-pasajeros-pendientes',template:/*ion-inline-start:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/pages/pasajeros-pendientes/pasajeros-pendientes.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Lista de Pasajeros</ion-title>\n    <button ion-button icon-only menuToggle end>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n    <ion-item *ngIf="pasajeros == null">\n      <h1>Aún no ha seleccionado<br>un tramo.</h1>\n      <br>\n      <h2>Debe seleccionar un tramo, para<br>poder ver la lista de pasajeros<br>por embarcar.</h2>\n    </ion-item>\n  </ion-card>\n  <ion-card *ngIf="pasajeros != null">\n    <ion-card-title><strong>Pasajeros por Embarcar</strong></ion-card-title>\n    <ion-list>\n      <ion-item *ngFor="let pasajero of pasajeros; let i=index">\n        <b>{{i + 1}}) </b>\n        <b>Nombre</b>: {{pasajero.nombre}} {{pasajero.apellido}}\n        <br>\n        <b>ID de Reserva</b>: {{pasajero.id_reserva}}\n      </ion-item>\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/pages/pasajeros-pendientes/pasajeros-pendientes.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* MenuController */],
             __WEBPACK_IMPORTED_MODULE_2__providers_rest_service_rest_service__["a" /* RestServiceProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]])
@@ -874,7 +878,7 @@ var VerificacionPage = /** @class */ (function () {
     };
     VerificacionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-verificacion',template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\verificacion\verificacion.html"*/'<!--\n  Generated template for the VerificacionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Verificacion</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\verificacion\verificacion.html"*/,
+            selector: 'page-verificacion',template:/*ion-inline-start:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/pages/verificacion/verificacion.html"*/'<!--\n  Generated template for the VerificacionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Verificacion</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/pages/verificacion/verificacion.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
     ], VerificacionPage);
@@ -1119,7 +1123,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\app\app.html"*/'<ion-menu [content]="content" persistent="true">\n\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menú</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button ion-item (click)="abrirPagina(PasajerosPendientes)">\n        1.- Pasajeros por Embarcar\n      </button>\n      <button ion-item (click)="abrirPagina(PasajerosEmbarcados)">\n        2.- Pasajeros Embarcados\n      </button>\n      <button ion-item (click)="abrirPagina(Ayuda)">\n        3.- Ayuda\n      </button>\n      <button ion-item (click)="logOut()">\n        4.- Cerrar Sesión\n      </button>\n    </ion-list>\n  </ion-content>\n\n  <ion-footer>\n    <ion-toolbar>\n      <ion-title>Versión: 2.1.0</ion-title>\n    </ion-toolbar>\n  </ion-footer>\n</ion-menu>\n\n\n\n<ion-nav [root]="rootPage" #content></ion-nav>\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/app/app.html"*/'<ion-menu [content]="content" persistent="true">\n\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menú</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button ion-item (click)="abrirPagina(PasajerosPendientes)">\n        1.- Pasajeros por Embarcar\n      </button>\n      <button ion-item (click)="abrirPagina(PasajerosEmbarcados)">\n        2.- Pasajeros Embarcados\n      </button>\n      <button ion-item (click)="abrirPagina(Ayuda)">\n        3.- Ayuda\n      </button>\n      <button ion-item (click)="logOut()">\n        4.- Cerrar Sesión\n      </button>\n    </ion-list>\n  </ion-content>\n\n  <ion-footer>\n    <ion-toolbar>\n      <ion-title>Versión: 2.1.0</ion-title>\n    </ion-toolbar>\n  </ion-footer>\n</ion-menu>\n\n\n\n<ion-nav [root]="rootPage" #content></ion-nav>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* MenuController */], __WEBPACK_IMPORTED_MODULE_10__ionic_storage__["b" /* Storage */],
@@ -1191,20 +1195,19 @@ var ScanQrPage = /** @class */ (function () {
         this.dataVehiculo = { tipo_ticket: '', id_ticket: '', id_cruce: '', id_tramo: '', val_seed: '' };
         this.resultadoSQL = { ticket: '', resultado: '' };
     }
+    // scanOpenSourceQR(){
+    //  this.barcodeScanner.scan().then((barcodeData) => {
+    //    this.procesaDataQR(barcodeData.text);
+    //   }, (err) => {
+    //     console.log(err);
+    //   });
+    // }
     ScanQrPage.prototype.scanOpenSourceQR = function () {
-        var _this = this;
-        this.barcodeScanner.scan().then(function (barcodeData) {
-            _this.procesaDataQR(barcodeData.text);
-        }, function (err) {
-            console.log(err);
-        });
-    };
-    /*   scanOpenSourceQR(){
-        let codigoQR;
-        codigoQR = "20&66772&7470&11179433";
+        var codigoQR;
+        //codigoQR = "20&66772&7470&11179433";
         codigoQR = "17&72233&7470&15242958";
         this.procesaDataQR(codigoQR);
-      } */
+    };
     ScanQrPage.prototype.getOverlayStyle = function () {
         var isSemi = this.semicircle;
         var transform = (isSemi ? '' : 'translateY(-50%) ') + 'translateX(-50%)';
@@ -1221,11 +1224,17 @@ var ScanQrPage = /** @class */ (function () {
     //Cuando se va a enetrar a la pantalla, este código se ejecuta.
     ScanQrPage.prototype.ionViewWillEnter = function () {
         var _this = this;
-        this.tramo = this.navParams.data;
+        this.tramo = this.navParams.data.tramo;
         console.log(this.tramo.cruce.id_tramo);
         // localStorage.setItem("cruce", JSON.stringify(this.tramo.cruce));
         console.log(this.tramo);
         var id_cruce_tramo = { id_cruce: this.tramo.cruce.id_cruce, id_tramo: this.tramo.cruce.id_tramo };
+        if (this.navParams.data.switch == true) {
+            this.escaneo_continuo = true;
+        }
+        else {
+            this.escaneo_continuo = false;
+        }
         this.restService.postCantPasajeros(id_cruce_tramo).then(function (dataSP) {
             if (dataSP['name'] === 'HttpErrorResponse') {
                 console.log("No hay conexión");
@@ -1240,6 +1249,26 @@ var ScanQrPage = /** @class */ (function () {
             }
         });
     };
+    //Cuando se entró a la pantalla...
+    ScanQrPage.prototype.ionViewDidEnter = function () {
+        var _this = this;
+        if (this.escaneo_continuo == true) {
+            console.log("TRUE -> Escaner en modo automatico");
+            setTimeout(function () {
+                _this.scanOpenSourceQR();
+            }, 1500);
+        }
+        else {
+            console.log("FALSE -> Escaner en modo manual");
+            return;
+        }
+    };
+    ScanQrPage.prototype.escaneoContinuo = function () {
+        if (this.escaneo_continuo == false) {
+            //this.navCtrl.setRoot(ScanQrPage, {tramo: this.tramo});
+            return;
+        }
+    };
     //Función que crea un 'cargando...' y la llamamos cuando sea necesario
     ScanQrPage.prototype.presentLoading = function () {
         var loading = this.loadingCtrl.create({
@@ -1248,7 +1277,7 @@ var ScanQrPage = /** @class */ (function () {
         loading.present();
         setTimeout(function () {
             loading.dismiss();
-        }, 1000);
+        }, 650);
     };
     //función que crea un mensaje dentro de una ventana negra durante un tiempo, en la parte inferior de la pantalla del celular
     ScanQrPage.prototype.presentToast = function (tipoError) {
@@ -1315,10 +1344,10 @@ var ScanQrPage = /** @class */ (function () {
                             console.log('ERROR');
                         }
                         else if (_this.tramo.cruce.id_cruce == _this.dataVehiculo.id_cruce && _this.resultadoSQL.resultado == 8) {
-                            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__aprobacion_aprobacion__["a" /* AprobacionPage */], { dataQR: splittedQR, tramo: _this.tramo });
+                            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__aprobacion_aprobacion__["a" /* AprobacionPage */], { dataQR: splittedQR, tramo: _this.tramo, switch: _this.escaneo_continuo });
                         }
                         else {
-                            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__rechazo_rechazo__["a" /* RechazoPage */], { dataQR: splittedQR, tramo: _this.tramo, resultado: _this.resultadoSQL.resultado });
+                            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__rechazo_rechazo__["a" /* RechazoPage */], { dataQR: splittedQR, tramo: _this.tramo, resultado: _this.resultadoSQL.resultado, switch: _this.escaneo_continuo });
                         }
                     });
                 }
@@ -1329,10 +1358,10 @@ var ScanQrPage = /** @class */ (function () {
                 //Validamos el Ticket
                 var compararValSeed = this.validationSeed(+this.data.id_ticket, +this.data.id_cruce, +this.data.tipo_ticket);
                 if (this.data.val_seed == compararValSeed.toString()) {
-                    this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__aprobacion_aprobacion__["a" /* AprobacionPage */], { dataQR: splittedQR, tramo: this.tramo });
+                    this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__aprobacion_aprobacion__["a" /* AprobacionPage */], { dataQR: splittedQR, tramo: this.tramo, switch: this.escaneo_continuo });
                 }
                 else {
-                    this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__rechazo_rechazo__["a" /* RechazoPage */], { dataQR: splittedQR, tramo: this.tramo });
+                    this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__rechazo_rechazo__["a" /* RechazoPage */], { dataQR: splittedQR, tramo: this.tramo, switch: this.escaneo_continuo });
                 }
                 break;
             }
@@ -1341,10 +1370,10 @@ var ScanQrPage = /** @class */ (function () {
                 //Validamos el Ticket
                 var compararValSeed = this.validationSeed(+this.dataVehiculo.id_ticket, +this.dataVehiculo.id_cruce, +this.dataVehiculo.tipo_ticket);
                 if (this.dataVehiculo.val_seed == compararValSeed.toString()) {
-                    this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__aprobacion_aprobacion__["a" /* AprobacionPage */], { dataQR: splittedQR, tramo: this.tramo });
+                    this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__aprobacion_aprobacion__["a" /* AprobacionPage */], { dataQR: splittedQR, tramo: this.tramo, switch: this.escaneo_continuo });
                 }
                 else {
-                    this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__rechazo_rechazo__["a" /* RechazoPage */], { dataQR: splittedQR, tramo: this.tramo });
+                    this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__rechazo_rechazo__["a" /* RechazoPage */], { dataQR: splittedQR, tramo: this.tramo, switch: this.escaneo_continuo });
                 }
                 break;
             }
@@ -1367,10 +1396,10 @@ var ScanQrPage = /** @class */ (function () {
     //Validamos los datos del tramo seleccionado vs la data del QR de pasajero
     ScanQrPage.prototype.aprobarRechazarTicketPersona = function (splittedQR) {
         if (this.tramo.cruce.id_cruce == this.data.id_cruce && this.resultadoSQL.resultado == 8) {
-            this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__aprobacion_aprobacion__["a" /* AprobacionPage */], { dataQR: splittedQR, tramo: this.tramo });
+            this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__aprobacion_aprobacion__["a" /* AprobacionPage */], { dataQR: splittedQR, tramo: this.tramo, switch: this.escaneo_continuo });
         }
         else {
-            this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__rechazo_rechazo__["a" /* RechazoPage */], { resultado: this.resultadoSQL.resultado, tramo: this.tramo, dataQR: splittedQR });
+            this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__rechazo_rechazo__["a" /* RechazoPage */], { resultado: this.resultadoSQL.resultado, tramo: this.tramo, dataQR: splittedQR, switch: this.escaneo_continuo });
         }
         console.log("Validación exitosa de ticket");
     };
@@ -1388,13 +1417,12 @@ var ScanQrPage = /** @class */ (function () {
     };
     ScanQrPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-scan-qr',template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\scan-qr\scan-qr.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Escanear Código QR</ion-title>\n    <button ion-button icon-only menuToggle end>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content no-bounce>\n\n  <ion-card style="margin-top: 25%;">\n    <ion-card-content>\n      <ion-card-title style="text-align: center;margin: 0 0 3rem 0;">Escanee el código QR de la Tarjeta de Embarque</ion-card-title>\n      <button style="height:8rem; transition:none; font-size:2.4rem; border-radius: 30px;"\n              ion-button block color="Broom"\n              (click)="scanOpenSourceQR($event)">REALIZAR SCAN QR\n              <ion-icon name="barcode"></ion-icon>\n      </button>\n    </ion-card-content>\n  </ion-card>\n\n  <div class="progress-wrapper">\n    <div class="current" [ngStyle]="getOverlayStyle()">{{ current }}/{{ max }}</div>\n\n    <round-progress\n      [current]="current"\n      [max]="max"\n      [stroke]="stroke"\n      [radius]="radius"\n      [semicircle]="semicircle"\n      [rounded]="rounded"\n      [responsive]="responsive"\n      [clockwise]="clockwise"\n      [color]="gradient ? \'url(#gradient)\' : color"\n      [background]="background"\n      [duration]="duration"\n      [animation]="animation"\n      [animationDelay]="animationDelay"></round-progress>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\scan-qr\scan-qr.html"*/,
+            selector: 'page-scan-qr',template:/*ion-inline-start:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/pages/scan-qr/scan-qr.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Escanear Código QR</ion-title>\n    <button ion-button icon-only menuToggle end>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content no-bounce>\n\n  <ion-item>\n    <ion-label>Escaneo Continuo</ion-label>\n    <ion-toggle [(ngModel)]="escaneo_continuo" (ionChange)="escaneoContinuo(this)"></ion-toggle>\n  </ion-item>\n\n  <ion-card style="margin-top: 20%;">\n    <ion-card-content>\n      <ion-card-title style="text-align: center;margin: 0 0 3rem 0;">Escanee el código QR de la Tarjeta de Embarque</ion-card-title>\n      <button style="height:8rem; transition:none; font-size:2.4rem; border-radius: 30px;"\n              ion-button block color="Broom"\n              (click)="scanOpenSourceQR($event)">REALIZAR SCAN QR\n              <ion-icon name="barcode"></ion-icon>\n      </button>\n    </ion-card-content>\n  </ion-card>\n\n  <div class="progress-wrapper">\n    <div class="current" [ngStyle]="getOverlayStyle()">{{ current }}/{{ max }}</div>\n\n    <round-progress\n      [current]="current"\n      [max]="max"\n      [stroke]="stroke"\n      [radius]="radius"\n      [semicircle]="semicircle"\n      [rounded]="rounded"\n      [responsive]="responsive"\n      [clockwise]="clockwise"\n      [color]="gradient ? \'url(#gradient)\' : color"\n      [background]="background"\n      [duration]="duration"\n      [animation]="animation"\n      [animationDelay]="animationDelay"></round-progress>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/pages/scan-qr/scan-qr.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__ionic_native_barcode_scanner__["a" /* BarcodeScanner */], __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__["a" /* RestServiceProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_barcode_scanner__["a" /* BarcodeScanner */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_barcode_scanner__["a" /* BarcodeScanner */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__["a" /* RestServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__["a" /* RestServiceProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]) === "function" && _f || Object])
     ], ScanQrPage);
     return ScanQrPage;
+    var _a, _b, _c, _d, _e, _f;
 }());
 
 //# sourceMappingURL=scan-qr.js.map
@@ -1551,7 +1579,7 @@ var SeleccionPage = /** @class */ (function () {
     };
     SeleccionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-seleccion',template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\seleccion\seleccion.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title class="logo"></ion-title>\n\n    <button ion-button icon-only menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-card>\n    <ion-card-content>\n      <ion-card-title>Sistema de Registro de Embarque de Pasajeros</ion-card-title>\n      <ion-list>\n        <ion-item>\n          <ion-icon name="person" item-start></ion-icon>\n          <ion-label style="font-size:1.45rem;">Bienvenido: <span>{{usuario.username}} {{usuario.usersecondname}}</span></ion-label>\n        </ion-item>\n        <ion-item>\n          <button style="height: 6rem; transition: none;font-size: 2.1rem;" ion-button full color="Broom"\n                  (click)="abrirViajes()">Seleccionar Viaje</button>\n        </ion-item>\n      </ion-list>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\seleccion\seleccion.html"*/,
+            selector: 'page-seleccion',template:/*ion-inline-start:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/pages/seleccion/seleccion.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title class="logo"></ion-title>\n\n    <button ion-button icon-only menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-card>\n    <ion-card-content>\n      <ion-card-title>Sistema de Registro de Embarque de Pasajeros</ion-card-title>\n      <ion-list>\n        <ion-item>\n          <ion-icon name="person" item-start></ion-icon>\n          <ion-label style="font-size:1.45rem;">Bienvenido: <span>{{usuario.username}} {{usuario.usersecondname}}</span></ion-label>\n        </ion-item>\n        <ion-item>\n          <button style="height: 6rem; transition: none;font-size: 2.1rem;" ion-button full color="Broom"\n                  (click)="abrirViajes()">Seleccionar Viaje</button>\n        </ion-item>\n      </ion-list>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/pages/seleccion/seleccion.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_3__providers_storage_service_storage_service__["a" /* StorageServiceProvider */]])
@@ -1734,7 +1762,7 @@ var ViajesPage = /** @class */ (function () {
     ], ViajesPage.prototype, "selectDestino", void 0);
     ViajesPage = ViajesPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-viajes',template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\viajes\viajes.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Selección de Viaje</ion-title>\n    <button ion-button icon-only menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding no-bounce>\n\n<ion-list>\n <h4 *ngIf="Viaje.destino == null">Seleccione el Origen del tramo.</h4>\n <ion-item *ngIf="Viaje.destino == null">\n   <ion-label style="font-size:2rem">ORIGEN</ion-label>\n   <!-- Ante la seleccion del item, se envia al controlador el parametro del ngModel para correr el codigo -->\n   <ion-select #selectOrigenes\n               [(ngModel)]="Viaje.origen" name="origen"\n               interface="action-sheet"\n               submitText="Aceptar" cancelText="Cancelar"\n               (ionChange)="onSelectChange(Viaje.origen)"\n               (ionChange)="abrirDestino()">\n     <ion-option *ngFor="let origen of origenes">{{ origen.nombre_sitio }}</ion-option>\n   </ion-select>\n </ion-item>\n <h4 *ngIf="Viaje.destino == null && Viaje.origen != null">Seleccione el Destino del tramo.</h4>\n <ion-item *ngIf="Viaje.destino == null && Viaje.origen != null">\n   <ion-label style="font-size:2rem">DESTINO</ion-label>\n   <ion-select  #selectDestino\n                [(ngModel)]="Viaje.destino" name="destino"\n                interface="action-sheet"\n                submitText="Aceptar" cancelText="Cancelar"\n                (ionChange)="buscarCruce(Viaje.destino)">\n    <ion-option *ngFor="let destino of destinos">{{ destino.nombre_sitio }}</ion-option>\n   </ion-select>\n </ion-item>\n<h1 *ngIf="Viaje.destino != null">Seleccione uno de los siguientes tramos</h1>\n <ion-card *ngFor="let cruce of cruces; let i = index" (click)="seleccionTramo(cruce, Viaje.origen, Viaje.destino)">\n   <ion-card-content *ngIf="i < 2">\n     <ion-card-title>Fecha: {{cruce.horario_cruce | date :"dd/MM/yyyy \'Cruce:\' h:mma ":"+0000"}}</ion-card-title>\n     <h2>{{Viaje.origen}} -> {{Viaje.destino}}</h2>\n     <h2>Presentación: {{cruce.horario_presentacion | date: \'h:mma \':\'+0000\'}}</h2>\n     <h3>Nave: {{cruce.nombre_nave}}</h3>\n   </ion-card-content>\n </ion-card>\n <ion-item style="position: absolute; bottom:0; margin-left: -15px;"\n           *ngIf="Viaje.destino!= null">\n   <button style="height: 6rem;transition: none;font-size: 2rem;"\n           ion-button full color="danger"\n           (click)="limpiarBusqueda()">\n    CANCELAR<ion-icon name="trash"></ion-icon>\n  </button>\n </ion-item>\n</ion-list>\n\n\n</ion-content>\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\viajes\viajes.html"*/,
+            selector: 'page-viajes',template:/*ion-inline-start:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/pages/viajes/viajes.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Selección de Viaje</ion-title>\n    <button ion-button icon-only menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding no-bounce>\n\n<ion-list>\n <h4 *ngIf="Viaje.destino == null">Seleccione el Origen del tramo.</h4>\n <ion-item *ngIf="Viaje.destino == null">\n   <ion-label style="font-size:2rem">ORIGEN</ion-label>\n   <!-- Ante la seleccion del item, se envia al controlador el parametro del ngModel para correr el codigo -->\n   <ion-select #selectOrigenes\n               [(ngModel)]="Viaje.origen" name="origen"\n               interface="action-sheet"\n               submitText="Aceptar" cancelText="Cancelar"\n               (ionChange)="onSelectChange(Viaje.origen)"\n               (ionChange)="abrirDestino()">\n     <ion-option *ngFor="let origen of origenes">{{ origen.nombre_sitio }}</ion-option>\n   </ion-select>\n </ion-item>\n <h4 *ngIf="Viaje.destino == null && Viaje.origen != null">Seleccione el Destino del tramo.</h4>\n <ion-item *ngIf="Viaje.destino == null && Viaje.origen != null">\n   <ion-label style="font-size:2rem">DESTINO</ion-label>\n   <ion-select  #selectDestino\n                [(ngModel)]="Viaje.destino" name="destino"\n                interface="action-sheet"\n                submitText="Aceptar" cancelText="Cancelar"\n                (ionChange)="buscarCruce(Viaje.destino)">\n    <ion-option *ngFor="let destino of destinos">{{ destino.nombre_sitio }}</ion-option>\n   </ion-select>\n </ion-item>\n<h1 *ngIf="Viaje.destino != null">Seleccione uno de los siguientes tramos</h1>\n <ion-card *ngFor="let cruce of cruces; let i = index" (click)="seleccionTramo(cruce, Viaje.origen, Viaje.destino)">\n   <ion-card-content *ngIf="i < 2">\n     <ion-card-title>Fecha: {{cruce.horario_cruce | date :"dd/MM/yyyy \'Cruce:\' h:mma ":"+0000"}}</ion-card-title>\n     <h2>{{Viaje.origen}} -> {{Viaje.destino}}</h2>\n     <h2>Presentación: {{cruce.horario_presentacion | date: \'h:mma \':\'+0000\'}}</h2>\n     <h3>Nave: {{cruce.nombre_nave}}</h3>\n   </ion-card-content>\n </ion-card>\n <ion-item style="position: absolute; bottom:0; margin-left: -15px;"\n           *ngIf="Viaje.destino!= null">\n   <button style="height: 6rem;transition: none;font-size: 2rem;"\n           ion-button full color="danger"\n           (click)="limpiarBusqueda()">\n    CANCELAR<ion-icon name="trash"></ion-icon>\n  </button>\n </ion-item>\n</ion-list>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/ioEmbarquePasajeros/src/pages/viajes/viajes.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__["a" /* RestServiceProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */],

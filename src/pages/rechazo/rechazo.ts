@@ -55,5 +55,8 @@ export class RechazoPage {
     }
     return this.motivo;
   }
+  changeSwitch(){
+    this.navParams.data.switch = false;
+  }
 
 }

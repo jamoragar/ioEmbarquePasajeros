@@ -50,7 +50,7 @@ export class ResumenPage {
     loading.present();
 
     setTimeout(() => {
-    this.navCtrl.setRoot(ScanQrPage, this.tramo);
+    this.navCtrl.setRoot(ScanQrPage, {tramo: this.tramo});
   }, 1300);
 
     setTimeout(() => {
