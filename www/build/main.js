@@ -1,14 +1,14 @@
 webpackJsonp([6],{
 
-/***/ 111:
+/***/ 112:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AprobacionPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scan_qr_scan_qr__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scan_qr_scan_qr__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__ = __webpack_require__(22);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -96,7 +96,7 @@ var AprobacionPage = /** @class */ (function () {
     };
     AprobacionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-aprobacion',template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\aprobacion\aprobacion.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>PASAJERO VALIDADO</ion-title>\n\n    <button ion-button icon-only menuToggle end>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n  <ion-card>\n\n    <ion-card-header><ion-icon name="checkmark"></ion-icon></ion-card-header>\n\n    <ion-card-content>\n\n      <ion-card-title><strong>{{titulo}} EMBARCADO</strong></ion-card-title>\n\n      <ion-list>\n\n        <ion-item>\n\n          <p style="font-size: 1.1em;" align="center">\n\n            {{titulo}}\n\n          </p>\n\n          <br>\n\n          <p style="font-size: 1.1em;" align="center">\n\n            EMBARCADO CON ÉXITO\n\n          </p>\n\n        </ion-item>\n\n      </ion-list>\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-item style="bottom:0; position:absolute;">\n\n    <button ion-button block color="danger"\n\n            style="height:6rem; border-radius: 8px; font-size: 2rem;"\n\n            (click)="changeSwitch()">Detener Escaneo Continuo</button>\n\n  </ion-item>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\aprobacion\aprobacion.html"*/,
+            selector: 'page-aprobacion',template:/*ion-inline-start:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/pages/aprobacion/aprobacion.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>PASAJERO VALIDADO</ion-title>\n    <button ion-button icon-only menuToggle end>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <ion-card>\n    <ion-card-header><ion-icon name="checkmark"></ion-icon></ion-card-header>\n    <ion-card-content>\n      <ion-card-title><strong>{{titulo}} EMBARCADO</strong></ion-card-title>\n      <ion-list>\n        <ion-item>\n          <p style="font-size: 1.1em;" align="center">\n            {{titulo}}\n          </p>\n          <br>\n          <p style="font-size: 1.1em;" align="center">\n            EMBARCADO CON ÉXITO\n          </p>\n        </ion-item>\n      </ion-list>\n    </ion-card-content>\n  </ion-card>\n  <ion-item style="bottom:0; position:absolute;">\n    <button ion-button block color="danger"\n            style="height:6rem; border-radius: 8px; font-size: 2rem;"\n            (click)="changeSwitch()">Detener Escaneo Continuo</button>\n  </ion-item>\n</ion-content>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/pages/aprobacion/aprobacion.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__["a" /* RestServiceProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]])
@@ -108,14 +108,14 @@ var AprobacionPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 112:
+/***/ 113:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RechazoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scan_qr_scan_qr__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scan_qr_scan_qr__ = __webpack_require__(43);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -174,25 +174,24 @@ var RechazoPage = /** @class */ (function () {
     };
     RechazoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-rechazo',template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\rechazo\rechazo.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>PASAJERO RECHAZADO</ion-title>\n\n    <button ion-button icon-only menuToggle end>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n  <ion-card>\n\n    <ion-card-header><ion-icon name="close"></ion-icon></ion-card-header>\n\n    <ion-card-content>\n\n      <ion-card-title><strong>DATOS INVALIDOS</strong></ion-card-title>\n\n      <ion-list>\n\n        <ion-item>\n\n          <p style="font-size: 1.1em;" align="center">\n\n            <b>{{titulo}}</b> NO PUEDE<br>EMBARCAR!\n\n          </p>\n\n          <br><br>\n\n          <p style="font-size: 1em;" align="center">\n\n            MOTIVO:\n\n          </p>\n\n          <br>\n\n          <p align="center" style="font-size: 0.9em;">\n\n            <b>{{motivo}}</b><br><br>\n\n            REMITIR PASAJERO A<br>TERMINAL.\n\n          </p>\n\n        </ion-item>\n\n        <ion-item>\n\n          <br><br>\n\n          <button style="height:8rem; transition:none; font-size:2.4rem; border-radius: 30px;"\n\n                  ion-button full color="Broom"\n\n                  (click)="siguientePasajero()">SIGUIENTE PASAJERO</button>\n\n        </ion-item>\n\n      </ion-list>\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-item style="bottom:0; position:absolute;">\n\n      <button ion-button block color="danger"\n\n              style="height:6rem; border-radius: 8px; font-size: 2rem;"\n\n              (click)="changeSwitch()">Detener Escaneo Continuo</button>\n\n    </ion-item>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\rechazo\rechazo.html"*/,
+            selector: 'page-rechazo',template:/*ion-inline-start:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/pages/rechazo/rechazo.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>PASAJERO RECHAZADO</ion-title>\n    <button ion-button icon-only menuToggle end>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <ion-card>\n    <ion-card-header><ion-icon name="close"></ion-icon></ion-card-header>\n    <ion-card-content>\n      <ion-card-title><strong>DATOS INVALIDOS</strong></ion-card-title>\n      <ion-list>\n        <ion-item>\n          <p style="font-size: 1.1em;" align="center">\n            <b>{{titulo}}</b> NO PUEDE<br>EMBARCAR!\n          </p>\n          <br><br>\n          <p style="font-size: 1em;" align="center">\n            MOTIVO:\n          </p>\n          <br>\n          <p align="center" style="font-size: 0.9em;">\n            <b>{{motivo}}</b><br><br>\n            REMITIR PASAJERO A<br>TERMINAL.\n          </p>\n        </ion-item>\n        <ion-item>\n          <br><br>\n          <button style="height:8rem; transition:none; font-size:2.4rem; border-radius: 30px;"\n                  ion-button full color="Broom"\n                  (click)="siguientePasajero()">SIGUIENTE PASAJERO</button>\n        </ion-item>\n      </ion-list>\n    </ion-card-content>\n  </ion-card>\n  <ion-item style="bottom:0; position:absolute;">\n      <button ion-button block color="danger"\n              style="height:6rem; border-radius: 8px; font-size: 2rem;"\n              (click)="changeSwitch()">Detener Escaneo Continuo</button>\n    </ion-item>\n</ion-content>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/pages/rechazo/rechazo.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
     ], RechazoPage);
     return RechazoPage;
-    var _a, _b;
 }());
 
 //# sourceMappingURL=rechazo.js.map
 
 /***/ }),
 
-/***/ 113:
+/***/ 114:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AyudaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -238,7 +237,7 @@ var AyudaPage = /** @class */ (function () {
     };
     AyudaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-ayuda',template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\ayuda\ayuda.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Ayuda</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-slides pager>\n\n    <!-- Código para crear slides -->\n      <ion-slide *ngFor="let slide of slides">\n        <ion-toolbar>\n\n          <ion-buttons end>\n            <button ion-button color="primary"\n                    (click)="saltar_ayuda()">Saltar</button>\n          </ion-buttons>\n\n        </ion-toolbar>\n\n        <img [src]="slide.image" class="slide-image"/>\n        <h2 class="slide-title" [innerHTML]="slide.title"></h2>\n        <p [innerHTML]="slide.description"></p>\n      </ion-slide>\n      <!-- Fin del ngFor -->\n\n      <!-- Ultimo Slide -->\n      <ion-slide>\n        <ion-toolbar>\n        </ion-toolbar>\n\n        <img src="assets/imgs/ica-slidebox-img-4.png" class="slide-image"/>\n        <h2 class="slide-title">¿Listo para empezar?</h2>\n\n        <button ion-button large clear icon-right color="primary"\n                (click)="saltar_ayuda()">\n          Continuar\n          <ion-icon name="arrow-forward"></ion-icon>\n        </button>\n\n      </ion-slide>\n      <!-- Fin del último slide -->\n\n    </ion-slides>\n\n\n</ion-content>\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\ayuda\ayuda.html"*/,
+            selector: 'page-ayuda',template:/*ion-inline-start:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/pages/ayuda/ayuda.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Ayuda</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-slides pager>\n\n    <!-- Código para crear slides -->\n      <ion-slide *ngFor="let slide of slides">\n        <ion-toolbar>\n\n          <ion-buttons end>\n            <button ion-button color="primary"\n                    (click)="saltar_ayuda()">Saltar</button>\n          </ion-buttons>\n\n        </ion-toolbar>\n\n        <img [src]="slide.image" class="slide-image"/>\n        <h2 class="slide-title" [innerHTML]="slide.title"></h2>\n        <p [innerHTML]="slide.description"></p>\n      </ion-slide>\n      <!-- Fin del ngFor -->\n\n      <!-- Ultimo Slide -->\n      <ion-slide>\n        <ion-toolbar>\n        </ion-toolbar>\n\n        <img src="assets/imgs/ica-slidebox-img-4.png" class="slide-image"/>\n        <h2 class="slide-title">¿Listo para empezar?</h2>\n\n        <button ion-button large clear icon-right color="primary"\n                (click)="saltar_ayuda()">\n          Continuar\n          <ion-icon name="arrow-forward"></ion-icon>\n        </button>\n\n      </ion-slide>\n      <!-- Fin del último slide -->\n\n    </ion-slides>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/pages/ayuda/ayuda.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* MenuController */]])
     ], AyudaPage);
@@ -249,14 +248,14 @@ var AyudaPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 114:
+/***/ 115:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PasajerosEmbarcadosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_service_rest_service__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_service_rest_service__ = __webpack_require__(22);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -309,7 +308,7 @@ var PasajerosEmbarcadosPage = /** @class */ (function () {
     };
     PasajerosEmbarcadosPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-pasajeros-embarcados',template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\pasajeros-embarcados\pasajeros-embarcados.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Pasajeros Embarcados</ion-title>\n    <button ion-button icon-only menuToggle end>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n    <ion-item *ngIf="pasajeros == null">\n      <h1>Aún no ha seleccionado<br>un tramo.</h1>\n      <br>\n      <h2>Debe seleccionar un tramo, para<br>poder ver la lista de pasajeros<br>embarcados.</h2>\n    </ion-item>\n  </ion-card>\n  <ion-card *ngIf="pasajeros != null">\n    <ion-card-title><strong>Pasajeros Embarcados</strong></ion-card-title>\n    <ion-list>\n      <ion-item *ngFor="let pasajero of pasajeros; let i=index">\n        <b>{{i + 1}}) </b>\n        <b>Nombre</b>: {{pasajero.nombre}} {{pasajero.apellido}}\n        <br>\n        <b>ID de Reserva</b>: {{pasajero.id_reserva}}\n      </ion-item>\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\pasajeros-embarcados\pasajeros-embarcados.html"*/,
+            selector: 'page-pasajeros-embarcados',template:/*ion-inline-start:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/pages/pasajeros-embarcados/pasajeros-embarcados.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Pasajeros Embarcados</ion-title>\n    <button ion-button icon-only menuToggle end>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n    <ion-item *ngIf="pasajeros == null">\n      <h1>Aún no ha seleccionado<br>un tramo.</h1>\n      <br>\n      <h2>Debe seleccionar un tramo, para<br>poder ver la lista de pasajeros<br>embarcados.</h2>\n    </ion-item>\n  </ion-card>\n  <ion-card *ngIf="pasajeros != null">\n    <ion-card-title><strong>Pasajeros Embarcados</strong></ion-card-title>\n    <ion-list>\n      <ion-item *ngFor="let pasajero of pasajeros; let i=index">\n        <b>{{i + 1}}) </b>\n        <b>Nombre</b>: {{pasajero.nombre}} {{pasajero.apellido}}\n        <br>\n        <b>ID de Reserva</b>: {{pasajero.id_reserva}}\n      </ion-item>\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/pages/pasajeros-embarcados/pasajeros-embarcados.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* MenuController */],
             __WEBPACK_IMPORTED_MODULE_2__providers_rest_service_rest_service__["a" /* RestServiceProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]])
@@ -321,19 +320,21 @@ var PasajerosEmbarcadosPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 115:
+/***/ 116:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__seleccion_seleccion__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_rest_service_rest_service__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_storage_service_storage_service__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ts_md5_dist_md5__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__seleccion_seleccion__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_rest_service_rest_service__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_storage_service_storage_service__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ts_md5_dist_md5__ = __webpack_require__(172);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ts_md5_dist_md5___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_ts_md5_dist_md5__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_moment__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_moment__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -352,6 +353,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 //importamos plugin a utilizar
+
+//importing moment.js library
 
 var LoginPage = /** @class */ (function () {
     function LoginPage(navCtrl, navParams, menu, restService, http, toastCtrl, loadingCtrl, storageService) {
@@ -403,11 +406,7 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage.prototype.infoViaje = function () {
         var _this = this;
-        var fechaActual = new Date().toLocaleDateString();
-        var fechaSplitted = fechaActual.split("/");
-        var fechaNueva = fechaSplitted[2] + "-" + fechaSplitted[1] + "-" + fechaSplitted[0];
-        this.fechas.fecha = fechaNueva.toString();
-        console.log(fechaNueva);
+        this.fechas.fecha = __WEBPACK_IMPORTED_MODULE_7_moment__().format("YYYY-MM-DD");
         this.restService.postDate(this.fechas).then(function (data) {
             if (data['name'] === 'HttpErrorResponse') {
                 console.log("No hay conexión");
@@ -455,7 +454,7 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\login\login.html"*/'<ion-content class="background">\n  <ion-card>\n    <form (submit)="loginApp()">\n      <ion-card-header>\n        <div class="logo"></div>\n      </ion-card-header>\n      <ion-card-content>\n\n        <ion-list no-line>\n          <ion-item>\n            <ion-input [(ngModel)]="credenciales.username" autocapitalize="off" name="username" type="text" placeholder="Nombre de Usuario"></ion-input>\n          </ion-item>\n          <ion-item>\n            <ion-input [(ngModel)]="credenciales.password" autocapitalize="off" name="password" type="password" placeholder="Contraseña"></ion-input>\n          </ion-item>\n        </ion-list>\n        <button ion-button block outline color="light" type="submit">Ingresar</button>\n      </ion-card-content>\n    </form>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\login\login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/pages/login/login.html"*/'<ion-content class="background">\n  <ion-card>\n    <form (submit)="loginApp()">\n      <ion-card-header>\n        <div class="logo"></div>\n      </ion-card-header>\n      <ion-card-content>\n\n        <ion-list no-line>\n          <ion-item>\n            <ion-input [(ngModel)]="credenciales.username" autocapitalize="off" name="username" type="text" placeholder="Nombre de Usuario"></ion-input>\n          </ion-item>\n          <ion-item>\n            <ion-input [(ngModel)]="credenciales.password" autocapitalize="off" name="password" type="password" placeholder="Contraseña"></ion-input>\n          </ion-item>\n        </ion-list>\n        <button ion-button block outline color="light" type="submit">Ingresar</button>\n      </ion-card-content>\n    </form>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/pages/login/login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* MenuController */], __WEBPACK_IMPORTED_MODULE_4__providers_rest_service_rest_service__["a" /* RestServiceProvider */],
@@ -469,7 +468,7 @@ var LoginPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 126:
+/***/ 127:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -482,36 +481,36 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 126;
+webpackEmptyAsyncContext.id = 127;
 
 /***/ }),
 
-/***/ 167:
+/***/ 168:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/aprobacion/aprobacion.module": [
-		298,
+		425,
 		5
 	],
 	"../pages/ayuda/ayuda.module": [
-		299,
+		426,
 		4
 	],
 	"../pages/login/login.module": [
-		301,
+		429,
 		3
 	],
 	"../pages/pasajeros-embarcados/pasajeros-embarcados.module": [
-		300,
+		427,
 		2
 	],
 	"../pages/rechazo/rechazo.module": [
-		302,
+		428,
 		1
 	],
 	"../pages/verificacion/verificacion.module": [
-		303,
+		430,
 		0
 	]
 };
@@ -526,20 +525,20 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 167;
+webpackAsyncContext.id = 168;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 170:
+/***/ 171:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ResumenPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__viajes_viajes__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scan_qr_scan_qr__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__viajes_viajes__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scan_qr_scan_qr__ = __webpack_require__(43);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -596,7 +595,7 @@ var ResumenPage = /** @class */ (function () {
     };
     ResumenPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-resumen',template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\resumen\resumen.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Resumen Viaje Elegido</ion-title>\n    <button ion-button icon-only menuToggle end>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding no-bounce>\n  <ion-list no-border style="margin-top:0;">\n\n    <ion-item>\n      <ion-icon name=\'calendar\' item-start></ion-icon>\n      Fecha:\n      <ion-note item-end>\n        {{ tramo.cruce.horario_cruce | date: "dd/MM/yyyy" }}\n      </ion-note>\n    </ion-item>\n    <ion-item>\n      <ion-icon name=\'clock\' item-start></ion-icon>\n      Hora:\n      <ion-note item-end>\n      {{ tramo.cruce.horario_cruce | date: "h:mma":\'+0000\' }}\n      </ion-note>\n    </ion-item>\n    <ion-item>\n      <ion-icon name=\'boat\' item-start></ion-icon>\n      Nave:\n      <ion-note item-end>\n      {{ tramo.cruce.nombre_nave }}\n      </ion-note>\n    </ion-item>\n    <ion-item>\n      <ion-icon name=\'locate\' item-start></ion-icon>\n      Origen:\n      <ion-note item-end>\n      {{ tramo.origen }}\n      </ion-note>\n    </ion-item>\n    <ion-item>\n      <ion-icon name=\'map\' item-start></ion-icon>\n      Destino:\n      <ion-note item-end>\n      {{ tramo.destino }}\n      </ion-note>\n    </ion-item>\n    <ion-card>\n      <ion-card-content>\n        <ion-card-title>Este viaje es correcto?</ion-card-title>\n        <button ion-button block style="font-size:2rem; height:6rem;"\n                color="Broom"\n                (click)="viajeCorrecto()">Confirmar\n                <ion-icon name="checkmark-circle"></ion-icon>\n        </button>\n        <button ion-button block style="font-size:2rem; height:6rem; margin-top:1rem;"\n                color="danger"\n                (click)="viajeIncorrecto()">CANCELAR\n                <ion-icon name="close-circle"></ion-icon>\n\n        </button>\n      </ion-card-content>\n    </ion-card>\n\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\resumen\resumen.html"*/,
+            selector: 'page-resumen',template:/*ion-inline-start:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/pages/resumen/resumen.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Resumen Viaje Elegido</ion-title>\n    <button ion-button icon-only menuToggle end>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding no-bounce>\n  <ion-list no-border style="margin-top:0;">\n\n    <ion-item>\n      <ion-icon name=\'calendar\' item-start></ion-icon>\n      Fecha:\n      <ion-note item-end>\n        {{ tramo.cruce.horario_cruce | date: "dd/MM/yyyy" }}\n      </ion-note>\n    </ion-item>\n    <ion-item>\n      <ion-icon name=\'clock\' item-start></ion-icon>\n      Hora:\n      <ion-note item-end>\n      {{ tramo.cruce.horario_cruce | date: "h:mma":\'+0000\' }}\n      </ion-note>\n    </ion-item>\n    <ion-item>\n      <ion-icon name=\'boat\' item-start></ion-icon>\n      Nave:\n      <ion-note item-end>\n      {{ tramo.cruce.nombre_nave }}\n      </ion-note>\n    </ion-item>\n    <ion-item>\n      <ion-icon name=\'locate\' item-start></ion-icon>\n      Origen:\n      <ion-note item-end>\n      {{ tramo.origen }}\n      </ion-note>\n    </ion-item>\n    <ion-item>\n      <ion-icon name=\'map\' item-start></ion-icon>\n      Destino:\n      <ion-note item-end>\n      {{ tramo.destino }}\n      </ion-note>\n    </ion-item>\n    <ion-card>\n      <ion-card-content>\n        <ion-card-title>Este viaje es correcto?</ion-card-title>\n        <button ion-button block style="font-size:2rem; height:6rem;"\n                color="Broom"\n                (click)="viajeCorrecto()">Confirmar\n                <ion-icon name="checkmark-circle"></ion-icon>\n        </button>\n        <button ion-button block style="font-size:2rem; height:6rem; margin-top:1rem;"\n                color="danger"\n                (click)="viajeIncorrecto()">CANCELAR\n                <ion-icon name="close-circle"></ion-icon>\n\n        </button>\n      </ion-card-content>\n    </ion-card>\n\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/pages/resumen/resumen.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]])
@@ -608,14 +607,14 @@ var ResumenPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 21:
+/***/ 22:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RestServiceProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(400);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -776,14 +775,14 @@ var RestServiceProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 213:
+/***/ 338:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PasajerosPendientesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_service_rest_service__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_service_rest_service__ = __webpack_require__(22);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -836,7 +835,7 @@ var PasajerosPendientesPage = /** @class */ (function () {
     };
     PasajerosPendientesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-pasajeros-pendientes',template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\pasajeros-pendientes\pasajeros-pendientes.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Lista de Pasajeros</ion-title>\n    <button ion-button icon-only menuToggle end>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n    <ion-item *ngIf="pasajeros == null">\n      <h1>Aún no ha seleccionado<br>un tramo.</h1>\n      <br>\n      <h2>Debe seleccionar un tramo, para<br>poder ver la lista de pasajeros<br>por embarcar.</h2>\n    </ion-item>\n  </ion-card>\n  <ion-card *ngIf="pasajeros != null">\n    <ion-card-title><strong>Pasajeros por Embarcar</strong></ion-card-title>\n    <ion-list>\n      <ion-item *ngFor="let pasajero of pasajeros; let i=index">\n        <b>{{i + 1}}) </b>\n        <b>Nombre</b>: {{pasajero.nombre}} {{pasajero.apellido}}\n        <br>\n        <b>ID de Reserva</b>: {{pasajero.id_reserva}}\n      </ion-item>\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\pasajeros-pendientes\pasajeros-pendientes.html"*/,
+            selector: 'page-pasajeros-pendientes',template:/*ion-inline-start:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/pages/pasajeros-pendientes/pasajeros-pendientes.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Lista de Pasajeros</ion-title>\n    <button ion-button icon-only menuToggle end>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n    <ion-item *ngIf="pasajeros == null">\n      <h1>Aún no ha seleccionado<br>un tramo.</h1>\n      <br>\n      <h2>Debe seleccionar un tramo, para<br>poder ver la lista de pasajeros<br>por embarcar.</h2>\n    </ion-item>\n  </ion-card>\n  <ion-card *ngIf="pasajeros != null">\n    <ion-card-title><strong>Pasajeros por Embarcar</strong></ion-card-title>\n    <ion-list>\n      <ion-item *ngFor="let pasajero of pasajeros; let i=index">\n        <b>{{i + 1}}) </b>\n        <b>Nombre</b>: {{pasajero.nombre}} {{pasajero.apellido}}\n        <br>\n        <b>ID de Reserva</b>: {{pasajero.id_reserva}}\n      </ion-item>\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/pages/pasajeros-pendientes/pasajeros-pendientes.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* MenuController */],
             __WEBPACK_IMPORTED_MODULE_2__providers_rest_service_rest_service__["a" /* RestServiceProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]])
@@ -848,13 +847,13 @@ var PasajerosPendientesPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 216:
+/***/ 341:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VerificacionPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -882,7 +881,7 @@ var VerificacionPage = /** @class */ (function () {
     };
     VerificacionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-verificacion',template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\verificacion\verificacion.html"*/'<!--\n  Generated template for the VerificacionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Verificacion</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\verificacion\verificacion.html"*/,
+            selector: 'page-verificacion',template:/*ion-inline-start:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/pages/verificacion/verificacion.html"*/'<!--\n  Generated template for the VerificacionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Verificacion</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/pages/verificacion/verificacion.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
     ], VerificacionPage);
@@ -893,13 +892,13 @@ var VerificacionPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 217:
+/***/ 342:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(218);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(238);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(343);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(363);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -907,36 +906,36 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 238:
+/***/ 363:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ts_md5_dist_md5__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(336);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(337);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ts_md5_dist_md5__ = __webpack_require__(172);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ts_md5_dist_md5___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_ts_md5_dist_md5__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_seleccion_seleccion__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_viajes_viajes__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_resumen_resumen__ = __webpack_require__(170);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_verificacion_verificacion__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_scan_qr_scan_qr__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_rechazo_rechazo__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_aprobacion_aprobacion__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_pasajeros_pendientes_pasajeros_pendientes__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_pasajeros_embarcados_pasajeros_embarcados__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_ayuda_ayuda__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ionic_native_barcode_scanner__ = __webpack_require__(168);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__app_component__ = __webpack_require__(293);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_storage__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__providers_storage_service_storage_service__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_rest_service_rest_service__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23_angular_svg_round_progressbar__ = __webpack_require__(297);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_seleccion_seleccion__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_viajes_viajes__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_resumen_resumen__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_verificacion_verificacion__ = __webpack_require__(341);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_scan_qr_scan_qr__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_rechazo_rechazo__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_aprobacion_aprobacion__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_pasajeros_pendientes_pasajeros_pendientes__ = __webpack_require__(338);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_pasajeros_embarcados_pasajeros_embarcados__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_ayuda_ayuda__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ionic_native_barcode_scanner__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__app_component__ = __webpack_require__(420);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_storage__ = __webpack_require__(339);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__providers_storage_service_storage_service__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_rest_service_rest_service__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23_angular_svg_round_progressbar__ = __webpack_require__(424);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23_angular_svg_round_progressbar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_23_angular_svg_round_progressbar__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -999,8 +998,8 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/aprobacion/aprobacion.module#AprobacionPageModule', name: 'AprobacionPage', segment: 'aprobacion', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/ayuda/ayuda.module#AyudaPageModule', name: 'AyudaPage', segment: 'ayuda', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/pasajeros-embarcados/pasajeros-embarcados.module#PasajerosEmbarcadosPageModule', name: 'PasajerosEmbarcadosPage', segment: 'pasajeros-embarcados', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/rechazo/rechazo.module#RechazoPageModule', name: 'RechazoPage', segment: 'rechazo', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/verificacion/verificacion.module#VerificacionPageModule', name: 'VerificacionPage', segment: 'verificacion', priority: 'low', defaultHistory: [] }
                     ]
                 }),
@@ -1041,24 +1040,295 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 293:
+/***/ 402:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": 173,
+	"./af.js": 173,
+	"./ar": 174,
+	"./ar-dz": 175,
+	"./ar-dz.js": 175,
+	"./ar-kw": 176,
+	"./ar-kw.js": 176,
+	"./ar-ly": 177,
+	"./ar-ly.js": 177,
+	"./ar-ma": 178,
+	"./ar-ma.js": 178,
+	"./ar-sa": 179,
+	"./ar-sa.js": 179,
+	"./ar-tn": 180,
+	"./ar-tn.js": 180,
+	"./ar.js": 174,
+	"./az": 181,
+	"./az.js": 181,
+	"./be": 182,
+	"./be.js": 182,
+	"./bg": 183,
+	"./bg.js": 183,
+	"./bm": 184,
+	"./bm.js": 184,
+	"./bn": 185,
+	"./bn.js": 185,
+	"./bo": 186,
+	"./bo.js": 186,
+	"./br": 187,
+	"./br.js": 187,
+	"./bs": 188,
+	"./bs.js": 188,
+	"./ca": 189,
+	"./ca.js": 189,
+	"./cs": 190,
+	"./cs.js": 190,
+	"./cv": 191,
+	"./cv.js": 191,
+	"./cy": 192,
+	"./cy.js": 192,
+	"./da": 193,
+	"./da.js": 193,
+	"./de": 194,
+	"./de-at": 195,
+	"./de-at.js": 195,
+	"./de-ch": 196,
+	"./de-ch.js": 196,
+	"./de.js": 194,
+	"./dv": 197,
+	"./dv.js": 197,
+	"./el": 198,
+	"./el.js": 198,
+	"./en-au": 199,
+	"./en-au.js": 199,
+	"./en-ca": 200,
+	"./en-ca.js": 200,
+	"./en-gb": 201,
+	"./en-gb.js": 201,
+	"./en-ie": 202,
+	"./en-ie.js": 202,
+	"./en-il": 203,
+	"./en-il.js": 203,
+	"./en-nz": 204,
+	"./en-nz.js": 204,
+	"./eo": 205,
+	"./eo.js": 205,
+	"./es": 206,
+	"./es-do": 207,
+	"./es-do.js": 207,
+	"./es-us": 208,
+	"./es-us.js": 208,
+	"./es.js": 206,
+	"./et": 209,
+	"./et.js": 209,
+	"./eu": 210,
+	"./eu.js": 210,
+	"./fa": 211,
+	"./fa.js": 211,
+	"./fi": 212,
+	"./fi.js": 212,
+	"./fo": 213,
+	"./fo.js": 213,
+	"./fr": 214,
+	"./fr-ca": 215,
+	"./fr-ca.js": 215,
+	"./fr-ch": 216,
+	"./fr-ch.js": 216,
+	"./fr.js": 214,
+	"./fy": 217,
+	"./fy.js": 217,
+	"./gd": 218,
+	"./gd.js": 218,
+	"./gl": 219,
+	"./gl.js": 219,
+	"./gom-latn": 220,
+	"./gom-latn.js": 220,
+	"./gu": 221,
+	"./gu.js": 221,
+	"./he": 222,
+	"./he.js": 222,
+	"./hi": 223,
+	"./hi.js": 223,
+	"./hr": 224,
+	"./hr.js": 224,
+	"./hu": 225,
+	"./hu.js": 225,
+	"./hy-am": 226,
+	"./hy-am.js": 226,
+	"./id": 227,
+	"./id.js": 227,
+	"./is": 228,
+	"./is.js": 228,
+	"./it": 229,
+	"./it.js": 229,
+	"./ja": 230,
+	"./ja.js": 230,
+	"./jv": 231,
+	"./jv.js": 231,
+	"./ka": 232,
+	"./ka.js": 232,
+	"./kk": 233,
+	"./kk.js": 233,
+	"./km": 234,
+	"./km.js": 234,
+	"./kn": 235,
+	"./kn.js": 235,
+	"./ko": 236,
+	"./ko.js": 236,
+	"./ku": 237,
+	"./ku.js": 237,
+	"./ky": 238,
+	"./ky.js": 238,
+	"./lb": 239,
+	"./lb.js": 239,
+	"./lo": 240,
+	"./lo.js": 240,
+	"./lt": 241,
+	"./lt.js": 241,
+	"./lv": 242,
+	"./lv.js": 242,
+	"./me": 243,
+	"./me.js": 243,
+	"./mi": 244,
+	"./mi.js": 244,
+	"./mk": 245,
+	"./mk.js": 245,
+	"./ml": 246,
+	"./ml.js": 246,
+	"./mn": 247,
+	"./mn.js": 247,
+	"./mr": 248,
+	"./mr.js": 248,
+	"./ms": 249,
+	"./ms-my": 250,
+	"./ms-my.js": 250,
+	"./ms.js": 249,
+	"./mt": 251,
+	"./mt.js": 251,
+	"./my": 252,
+	"./my.js": 252,
+	"./nb": 253,
+	"./nb.js": 253,
+	"./ne": 254,
+	"./ne.js": 254,
+	"./nl": 255,
+	"./nl-be": 256,
+	"./nl-be.js": 256,
+	"./nl.js": 255,
+	"./nn": 257,
+	"./nn.js": 257,
+	"./pa-in": 258,
+	"./pa-in.js": 258,
+	"./pl": 259,
+	"./pl.js": 259,
+	"./pt": 260,
+	"./pt-br": 261,
+	"./pt-br.js": 261,
+	"./pt.js": 260,
+	"./ro": 262,
+	"./ro.js": 262,
+	"./ru": 263,
+	"./ru.js": 263,
+	"./sd": 264,
+	"./sd.js": 264,
+	"./se": 265,
+	"./se.js": 265,
+	"./si": 266,
+	"./si.js": 266,
+	"./sk": 267,
+	"./sk.js": 267,
+	"./sl": 268,
+	"./sl.js": 268,
+	"./sq": 269,
+	"./sq.js": 269,
+	"./sr": 270,
+	"./sr-cyrl": 271,
+	"./sr-cyrl.js": 271,
+	"./sr.js": 270,
+	"./ss": 272,
+	"./ss.js": 272,
+	"./sv": 273,
+	"./sv.js": 273,
+	"./sw": 274,
+	"./sw.js": 274,
+	"./ta": 275,
+	"./ta.js": 275,
+	"./te": 276,
+	"./te.js": 276,
+	"./tet": 277,
+	"./tet.js": 277,
+	"./tg": 278,
+	"./tg.js": 278,
+	"./th": 279,
+	"./th.js": 279,
+	"./tl-ph": 280,
+	"./tl-ph.js": 280,
+	"./tlh": 281,
+	"./tlh.js": 281,
+	"./tr": 282,
+	"./tr.js": 282,
+	"./tzl": 283,
+	"./tzl.js": 283,
+	"./tzm": 284,
+	"./tzm-latn": 285,
+	"./tzm-latn.js": 285,
+	"./tzm.js": 284,
+	"./ug-cn": 286,
+	"./ug-cn.js": 286,
+	"./uk": 287,
+	"./uk.js": 287,
+	"./ur": 288,
+	"./ur.js": 288,
+	"./uz": 289,
+	"./uz-latn": 290,
+	"./uz-latn.js": 290,
+	"./uz.js": 289,
+	"./vi": 291,
+	"./vi.js": 291,
+	"./x-pseudo": 292,
+	"./x-pseudo.js": 292,
+	"./yo": 293,
+	"./yo.js": 293,
+	"./zh-cn": 294,
+	"./zh-cn.js": 294,
+	"./zh-hk": 295,
+	"./zh-hk.js": 295,
+	"./zh-tw": 296,
+	"./zh-tw.js": 296
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number or string
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 402;
+
+/***/ }),
+
+/***/ 420:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_seleccion_seleccion__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_ayuda_ayuda__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_pasajeros_pendientes_pasajeros_pendientes__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_pasajeros_embarcados_pasajeros_embarcados__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_scan_qr_scan_qr__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_storage__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_storage_service_storage_service__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_rest_service_rest_service__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(337);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(336);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_seleccion_seleccion__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_ayuda_ayuda__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_pasajeros_pendientes_pasajeros_pendientes__ = __webpack_require__(338);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_pasajeros_embarcados_pasajeros_embarcados__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_scan_qr_scan_qr__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_storage__ = __webpack_require__(339);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_storage_service_storage_service__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_rest_service_rest_service__ = __webpack_require__(22);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1127,7 +1397,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\app\app.html"*/'<ion-menu [content]="content" persistent="true">\n\n\n\n  <ion-header>\n\n    <ion-toolbar>\n\n      <ion-title>Menú</ion-title>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n  <ion-content>\n\n    <ion-list>\n\n      <button ion-item (click)="abrirPagina(PasajerosPendientes)">\n\n        1.- Pasajeros por Embarcar\n\n      </button>\n\n      <button ion-item (click)="abrirPagina(PasajerosEmbarcados)">\n\n        2.- Pasajeros Embarcados\n\n      </button>\n\n      <button ion-item (click)="abrirPagina(Ayuda)">\n\n        3.- Ayuda\n\n      </button>\n\n      <button ion-item (click)="logOut()">\n\n        4.- Cerrar Sesión\n\n      </button>\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n  <ion-footer>\n\n    <ion-toolbar>\n\n      <ion-title>Versión: 2.8.0</ion-title>\n\n    </ion-toolbar>\n\n  </ion-footer>\n\n</ion-menu>\n\n\n\n\n\n\n\n<ion-nav [root]="rootPage" #content></ion-nav>\n\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/app/app.html"*/'<ion-menu [content]="content" persistent="true">\n\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menú</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button ion-item (click)="abrirPagina(PasajerosPendientes)">\n        1.- Pasajeros por Embarcar\n      </button>\n      <button ion-item (click)="abrirPagina(PasajerosEmbarcados)">\n        2.- Pasajeros Embarcados\n      </button>\n      <button ion-item (click)="abrirPagina(Ayuda)">\n        3.- Ayuda\n      </button>\n      <button ion-item (click)="logOut()">\n        4.- Cerrar Sesión\n      </button>\n    </ion-list>\n  </ion-content>\n\n  <ion-footer>\n    <ion-toolbar>\n      <ion-title>Versión: 2.8.1</ion-title>\n    </ion-toolbar>\n  </ion-footer>\n</ion-menu>\n\n\n\n<ion-nav [root]="rootPage" #content></ion-nav>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* MenuController */], __WEBPACK_IMPORTED_MODULE_10__ionic_storage__["b" /* Storage */],
@@ -1141,17 +1411,17 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 42:
+/***/ 43:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ScanQrPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_barcode_scanner__ = __webpack_require__(168);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__rechazo_rechazo__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__aprobacion_aprobacion__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_barcode_scanner__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__rechazo_rechazo__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__aprobacion_aprobacion__ = __webpack_require__(112);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1424,26 +1694,27 @@ var ScanQrPage = /** @class */ (function () {
     };
     ScanQrPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-scan-qr',template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\scan-qr\scan-qr.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Escanear Código QR</ion-title>\n\n    <button ion-button icon-only menuToggle end>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content no-bounce>\n\n\n\n  <ion-item>\n\n    <ion-label>Escaneo Continuo</ion-label>\n\n    <ion-toggle [(ngModel)]="escaneo_continuo" (ionChange)="escaneoContinuo(this)"></ion-toggle>\n\n  </ion-item>\n\n\n\n  <ion-card style="margin-top: 20%;">\n\n    <ion-card-content>\n\n      <ion-card-title style="text-align: center;margin: 0 0 3rem 0;">Escanee el código QR de la Tarjeta de Embarque</ion-card-title>\n\n      <button style="height:8rem; transition:none; font-size:2.4rem; border-radius: 30px;"\n\n              ion-button block color="Broom"\n\n              (click)="scanOpenSourceQR($event)">REALIZAR SCAN QR\n\n              <ion-icon name="barcode"></ion-icon>\n\n      </button>\n\n    </ion-card-content>\n\n  </ion-card>\n\n\n\n  <div class="progress-wrapper">\n\n    <div class="current" [ngStyle]="getOverlayStyle()">{{ current }}/{{ max }}</div>\n\n\n\n    <round-progress\n\n      [current]="current"\n\n      [max]="max"\n\n      [stroke]="stroke"\n\n      [radius]="radius"\n\n      [semicircle]="semicircle"\n\n      [rounded]="rounded"\n\n      [responsive]="responsive"\n\n      [clockwise]="clockwise"\n\n      [color]="gradient ? \'url(#gradient)\' : color"\n\n      [background]="background"\n\n      [duration]="duration"\n\n      [animation]="animation"\n\n      [animationDelay]="animationDelay"></round-progress>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\scan-qr\scan-qr.html"*/,
+            selector: 'page-scan-qr',template:/*ion-inline-start:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/pages/scan-qr/scan-qr.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Escanear Código QR</ion-title>\n    <button ion-button icon-only menuToggle end>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content no-bounce>\n\n  <ion-item>\n    <ion-label>Escaneo Continuo</ion-label>\n    <ion-toggle [(ngModel)]="escaneo_continuo" (ionChange)="escaneoContinuo(this)"></ion-toggle>\n  </ion-item>\n\n  <ion-card style="margin-top: 20%;">\n    <ion-card-content>\n      <ion-card-title style="text-align: center;margin: 0 0 3rem 0;">Escanee el código QR de la Tarjeta de Embarque</ion-card-title>\n      <button style="height:8rem; transition:none; font-size:2.4rem; border-radius: 30px;"\n              ion-button block color="Broom"\n              (click)="scanOpenSourceQR($event)">REALIZAR SCAN QR\n              <ion-icon name="barcode"></ion-icon>\n      </button>\n    </ion-card-content>\n  </ion-card>\n\n  <div class="progress-wrapper">\n    <div class="current" [ngStyle]="getOverlayStyle()">{{ current }}/{{ max }}</div>\n\n    <round-progress\n      [current]="current"\n      [max]="max"\n      [stroke]="stroke"\n      [radius]="radius"\n      [semicircle]="semicircle"\n      [rounded]="rounded"\n      [responsive]="responsive"\n      [clockwise]="clockwise"\n      [color]="gradient ? \'url(#gradient)\' : color"\n      [background]="background"\n      [duration]="duration"\n      [animation]="animation"\n      [animationDelay]="animationDelay"></round-progress>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/pages/scan-qr/scan-qr.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_barcode_scanner__["a" /* BarcodeScanner */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_barcode_scanner__["a" /* BarcodeScanner */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__["a" /* RestServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__["a" /* RestServiceProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]) === "function" && _f || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_barcode_scanner__["a" /* BarcodeScanner */], __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__["a" /* RestServiceProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]])
     ], ScanQrPage);
     return ScanQrPage;
-    var _a, _b, _c, _d, _e, _f;
 }());
 
 //# sourceMappingURL=scan-qr.js.map
 
 /***/ }),
 
-/***/ 43:
+/***/ 44:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StorageServiceProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__rest_service_rest_service__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__rest_service_rest_service__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1522,15 +1793,15 @@ var StorageServiceProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 85:
+/***/ 86:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SeleccionPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__viajes_viajes__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_storage_service_storage_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__viajes_viajes__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_storage_service_storage_service__ = __webpack_require__(44);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1586,7 +1857,7 @@ var SeleccionPage = /** @class */ (function () {
     };
     SeleccionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-seleccion',template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\seleccion\seleccion.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title class="logo"></ion-title>\n\n    <button ion-button icon-only menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-card>\n    <ion-card-content>\n      <ion-card-title>Sistema de Registro de Embarque de Pasajeros</ion-card-title>\n      <ion-list>\n        <ion-item>\n          <ion-icon name="person" item-start></ion-icon>\n          <ion-label style="font-size:1.45rem;">Bienvenido: <span>{{usuario.username}} {{usuario.usersecondname}}</span></ion-label>\n        </ion-item>\n        <ion-item>\n          <button style="height: 6rem; transition: none;font-size: 2.1rem;" ion-button full color="Broom"\n                  (click)="abrirViajes()">Seleccionar Viaje</button>\n        </ion-item>\n      </ion-list>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\seleccion\seleccion.html"*/,
+            selector: 'page-seleccion',template:/*ion-inline-start:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/pages/seleccion/seleccion.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title class="logo"></ion-title>\n\n    <button ion-button icon-only menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-card>\n    <ion-card-content>\n      <ion-card-title>Sistema de Registro de Embarque de Pasajeros</ion-card-title>\n      <ion-list>\n        <ion-item>\n          <ion-icon name="person" item-start></ion-icon>\n          <ion-label style="font-size:1.45rem;">Bienvenido: <span>{{usuario.username}} {{usuario.usersecondname}}</span></ion-label>\n        </ion-item>\n        <ion-item>\n          <button style="height: 6rem; transition: none;font-size: 2.1rem;" ion-button full color="Broom"\n                  (click)="abrirViajes()">Seleccionar Viaje</button>\n        </ion-item>\n      </ion-list>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/pages/seleccion/seleccion.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_3__providers_storage_service_storage_service__["a" /* StorageServiceProvider */]])
@@ -1598,16 +1869,16 @@ var SeleccionPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 86:
+/***/ 87:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViajesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__resumen_resumen__ = __webpack_require__(170);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_storage_service_storage_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__resumen_resumen__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_storage_service_storage_service__ = __webpack_require__(44);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1769,7 +2040,7 @@ var ViajesPage = /** @class */ (function () {
     ], ViajesPage.prototype, "selectDestino", void 0);
     ViajesPage = ViajesPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-viajes',template:/*ion-inline-start:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\viajes\viajes.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Selección de Viaje</ion-title>\n    <button ion-button icon-only menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding no-bounce>\n\n<ion-list>\n <h4 *ngIf="Viaje.destino == null">Seleccione el Origen del tramo.</h4>\n <ion-item *ngIf="Viaje.destino == null">\n   <ion-label style="font-size:2rem">ORIGEN</ion-label>\n   <!-- Ante la seleccion del item, se envia al controlador el parametro del ngModel para correr el codigo -->\n   <ion-select #selectOrigenes\n               [(ngModel)]="Viaje.origen" name="origen"\n               interface="action-sheet"\n               submitText="Aceptar" cancelText="Cancelar"\n               (ionChange)="onSelectChange(Viaje.origen)"\n               (ionChange)="abrirDestino()">\n     <ion-option *ngFor="let origen of origenes">{{ origen.nombre_sitio }}</ion-option>\n   </ion-select>\n </ion-item>\n <h4 *ngIf="Viaje.destino == null && Viaje.origen != null">Seleccione el Destino del tramo.</h4>\n <ion-item *ngIf="Viaje.destino == null && Viaje.origen != null">\n   <ion-label style="font-size:2rem">DESTINO</ion-label>\n   <ion-select  #selectDestino\n                [(ngModel)]="Viaje.destino" name="destino"\n                interface="action-sheet"\n                submitText="Aceptar" cancelText="Cancelar"\n                (ionChange)="buscarCruce(Viaje.destino)">\n    <ion-option *ngFor="let destino of destinos">{{ destino.nombre_sitio }}</ion-option>\n   </ion-select>\n </ion-item>\n<h1 *ngIf="Viaje.destino != null">Seleccione uno de los siguientes tramos</h1>\n <ion-card *ngFor="let cruce of cruces; let i = index" (click)="seleccionTramo(cruce, Viaje.origen, Viaje.destino)">\n   <ion-card-content *ngIf="i < 2">\n     <ion-card-title>Fecha: {{cruce.horario_cruce | date :"dd/MM/yyyy \'Cruce:\' h:mma ":"+0000"}}</ion-card-title>\n     <h2>{{Viaje.origen}} -> {{Viaje.destino}}</h2>\n     <h2>Presentación: {{cruce.horario_presentacion | date: \'h:mma \':\'+0000\'}}</h2>\n     <h3>Nave: {{cruce.nombre_nave}}</h3>\n   </ion-card-content>\n </ion-card>\n <ion-item style="position: absolute; bottom:0; margin-left: -15px;"\n           *ngIf="Viaje.destino!= null">\n   <button style="height: 6rem;transition: none;font-size: 2rem;"\n           ion-button full color="danger"\n           (click)="limpiarBusqueda()">\n    CANCELAR<ion-icon name="trash"></ion-icon>\n  </button>\n </ion-item>\n</ion-list>\n\n\n</ion-content>\n'/*ion-inline-end:"C:\+Tabsa\AppMovil\ioEmbarquePasajeros\src\pages\viajes\viajes.html"*/,
+            selector: 'page-viajes',template:/*ion-inline-start:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/pages/viajes/viajes.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Selección de Viaje</ion-title>\n    <button ion-button icon-only menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding no-bounce>\n\n<ion-list>\n <h4 *ngIf="Viaje.destino == null">Seleccione el Origen del tramo.</h4>\n <ion-item *ngIf="Viaje.destino == null">\n   <ion-label style="font-size:2rem">ORIGEN</ion-label>\n   <!-- Ante la seleccion del item, se envia al controlador el parametro del ngModel para correr el codigo -->\n   <ion-select #selectOrigenes\n               [(ngModel)]="Viaje.origen" name="origen"\n               interface="action-sheet"\n               submitText="Aceptar" cancelText="Cancelar"\n               (ionChange)="onSelectChange(Viaje.origen)"\n               (ionChange)="abrirDestino()">\n     <ion-option *ngFor="let origen of origenes">{{ origen.nombre_sitio }}</ion-option>\n   </ion-select>\n </ion-item>\n <h4 *ngIf="Viaje.destino == null && Viaje.origen != null">Seleccione el Destino del tramo.</h4>\n <ion-item *ngIf="Viaje.destino == null && Viaje.origen != null">\n   <ion-label style="font-size:2rem">DESTINO</ion-label>\n   <ion-select  #selectDestino\n                [(ngModel)]="Viaje.destino" name="destino"\n                interface="action-sheet"\n                submitText="Aceptar" cancelText="Cancelar"\n                (ionChange)="buscarCruce(Viaje.destino)">\n    <ion-option *ngFor="let destino of destinos">{{ destino.nombre_sitio }}</ion-option>\n   </ion-select>\n </ion-item>\n<h1 *ngIf="Viaje.destino != null">Seleccione uno de los siguientes tramos</h1>\n <ion-card *ngFor="let cruce of cruces; let i = index" (click)="seleccionTramo(cruce, Viaje.origen, Viaje.destino)">\n   <ion-card-content *ngIf="i < 2">\n     <ion-card-title>Fecha: {{cruce.horario_cruce | date :"dd/MM/yyyy \'Cruce:\' h:mma ":"+0000"}}</ion-card-title>\n     <h2>{{Viaje.origen}} -> {{Viaje.destino}}</h2>\n     <h2>Presentación: {{cruce.horario_presentacion | date: \'h:mma \':\'+0000\'}}</h2>\n     <h3>Nave: {{cruce.nombre_nave}}</h3>\n   </ion-card-content>\n </ion-card>\n <ion-item style="position: absolute; bottom:0; margin-left: -15px;"\n           *ngIf="Viaje.destino!= null">\n   <button style="height: 6rem;transition: none;font-size: 2rem;"\n           ion-button full color="danger"\n           (click)="limpiarBusqueda()">\n    CANCELAR<ion-icon name="trash"></ion-icon>\n  </button>\n </ion-item>\n</ion-list>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/jmoraga/TABSA/IONIC/ioEmbarquePasajeros/src/pages/viajes/viajes.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__["a" /* RestServiceProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */],
@@ -1783,5 +2054,5 @@ var ViajesPage = /** @class */ (function () {
 
 /***/ })
 
-},[217]);
+},[342]);
 //# sourceMappingURL=main.js.map

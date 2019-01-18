@@ -8,7 +8,8 @@ import { RestServiceProvider } from "../../providers/rest-service/rest-service";
 import { StorageServiceProvider } from "../../providers/storage-service/storage-service";
 //importamos plugin a utilizar
 import {Md5} from 'ts-md5/dist/md5';
-
+//importing moment.js library
+import * as moment from 'moment';
 
 
 @IonicPage()
@@ -68,11 +69,7 @@ export class LoginPage {
 
   }
   infoViaje(){
-    let fechaActual = new Date().toLocaleDateString()
-    let fechaSplitted = fechaActual.split("/");
-    let fechaNueva = fechaSplitted[2]+"-"+fechaSplitted[1]+"-"+fechaSplitted[0];
-    this.fechas.fecha = fechaNueva.toString();
-    console.log(fechaNueva);
+    this.fechas.fecha = moment().format("YYYY-MM-DD");
     this.restService.postDate(this.fechas).then(data =>{
       if(data['name'] === 'HttpErrorResponse'){
         console.log("No hay conexión");
