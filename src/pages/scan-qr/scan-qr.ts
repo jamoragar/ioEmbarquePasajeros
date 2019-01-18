@@ -51,19 +51,19 @@ export class ScanQrPage {
               public loadingCtrl: LoadingController, private toastCtrl: ToastController) {
               }
 
-  // scanOpenSourceQR(){
-  //  this.barcodeScanner.scan().then((barcodeData) => {
-  //    this.procesaDataQR(barcodeData.text);
-  //   }, (err) => {
-  //     console.log(err);
-  //   });
-  // }
   scanOpenSourceQR(){
-    let codigoQR;
-    //codigoQR = "20&66772&7470&11179433";
-    codigoQR = "17&72233&7470&15242958";
-    this.procesaDataQR(codigoQR);
+   this.barcodeScanner.scan().then((barcodeData) => {
+     this.procesaDataQR(barcodeData.text);
+    }, (err) => {
+      console.log(err);
+    });
   }
+  // scanOpenSourceQR(){
+  //   let codigoQR;
+  //   //codigoQR = "20&66772&7470&11179433";
+  //   codigoQR = "17&72233&7470&15252958";
+  //   this.procesaDataQR(codigoQR);
+  // }
   getOverlayStyle() {
     let isSemi = this.semicircle;
     let transform = (isSemi ? '' : 'translateY(-50%) ') + 'translateX(-50%)';
@@ -105,6 +105,11 @@ export class ScanQrPage {
         this.current = resultado;
       }
     });
+
+    //TEST para cant de pasajeros vendidos VS cant pasajeros de nave
+    this.restService
+    
+
   }
   //Cuando se entró a la pantalla...
   ionViewDidEnter(){

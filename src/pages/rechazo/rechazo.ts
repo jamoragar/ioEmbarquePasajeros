@@ -41,7 +41,7 @@ export class RechazoPage {
     }
   }
   siguientePasajero(){
-    this.navCtrl.setRoot(ScanQrPage, this.tramo);
+    this.navCtrl.setRoot(ScanQrPage, {tramo:this.tramo, switch:this.navParams.data.switch});
   }
   procesaMotivo(codigoResultado){
     if(codigoResultado == 0){
