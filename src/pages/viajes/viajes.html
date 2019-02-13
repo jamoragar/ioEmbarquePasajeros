@@ -8,7 +8,7 @@
 </ion-header>
 
 
-<ion-content padding no-bounce>
+<ion-content padding>
 
 <ion-list>
  <h4 *ngIf="Viaje.destino == null">Seleccione el Origen del tramo.</h4>
@@ -37,22 +37,26 @@
  </ion-item>
 <h1 *ngIf="Viaje.destino != null">Seleccione uno de los siguientes tramos</h1>
  <ion-card *ngFor="let cruce of cruces; let i = index" (click)="seleccionTramo(cruce, Viaje.origen, Viaje.destino)">
-   <ion-card-content *ngIf="i < 2">
+   <ion-card-content *ngIf="i < 3">
      <ion-card-title>Fecha: {{cruce.horario_cruce | date :"dd/MM/yyyy 'Cruce:' h:mma ":"+0000"}}</ion-card-title>
      <h2>{{Viaje.origen}} -> {{Viaje.destino}}</h2>
      <h2>Presentación: {{cruce.horario_presentacion | date: 'h:mma ':'+0000'}}</h2>
      <h3>Nave: {{cruce.nombre_nave}}</h3>
    </ion-card-content>
  </ion-card>
- <ion-item style="position: absolute; bottom:0; margin-left: -15px;"
-           *ngIf="Viaje.destino!= null">
-   <button style="height: 6rem;transition: none;font-size: 2rem;"
-           ion-button full color="danger"
-           (click)="limpiarBusqueda()">
-    CANCELAR<ion-icon name="trash"></ion-icon>
-  </button>
- </ion-item>
+
 </ion-list>
 
 
 </ion-content>
+<ion-footer padding>
+  <ion-item class="cancelar"
+            style="position: absolute; bottom:0; margin-left: -15px;"
+            *ngIf="Viaje.destino!= null">
+    <button style="height: 6rem;transition: none;font-size: 2rem;"
+            ion-button full color="danger"
+            (click)="limpiarBusqueda()">
+    CANCELAR<ion-icon name="trash"></ion-icon>
+    </button>
+  </ion-item>
+</ion-footer>

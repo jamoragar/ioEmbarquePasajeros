@@ -40,9 +40,11 @@ export class ViajesPage {
     }
     //Entre todos los tramos encontrados, buscamos lo que concuerden con el ID del tramos seleccionado por el operador, y guardamos solo dichos tramos en una variable.
     for (let j = 0; j < this.cruceSQL.recordset.length; j++) {
-        if(this.cruceSQL.recordset[j].id_tramo == id_tramo){
+      if(this.cruceSQL.recordset[j].id_tramo == id_tramo){
+        console.table(this.cruceSQL.recordset[j])
           this.cruces[this.aux] = this.cruceSQL.recordset[j];
           this.aux = this.aux + 1;
+          if(j > 3) return;
         }
     }
     if(this.aux == 0){

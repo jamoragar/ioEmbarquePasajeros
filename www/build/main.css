@@ -28238,3 +28238,10 @@ page-viajes ion-content {
 page-viajes .icon {
   padding-left: 10px;
 }
+
+page-viajes .cancelar {
+  height: 6rem;
+  -webkit-transition: none;
+  transition: none;
+  font-size: 2rem;
+}

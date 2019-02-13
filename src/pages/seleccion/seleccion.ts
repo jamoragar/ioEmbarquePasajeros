@@ -23,7 +23,7 @@ export class SeleccionPage {
                 this.usuario = this.navParams.data;
                 this.storageService.usuario = this.navParams.data;
                 this.storageService.ajustes.mostrar_login = false;
-                console.log(this.usuario);
+                console.table(this.usuario);
   }
 
   ionViewDidLoad(){
@@ -31,7 +31,7 @@ export class SeleccionPage {
     if(this.storageService.ajustes.existe_usuario == true){
       this.usuario = this.storageService.usuario;
       this.storageService.guardar_storage();
-      console.log(this.usuario);
+      console.table(this.usuario);
     }
     if(this.storageService.ajustes.existe_usuario == false){
       this.storageService.usuario = this.usuario;
