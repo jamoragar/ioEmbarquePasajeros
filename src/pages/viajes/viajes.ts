@@ -42,9 +42,10 @@ export class ViajesPage {
     for (let j = 0; j < this.cruceSQL.recordset.length; j++) {
       if(this.cruceSQL.recordset[j].id_tramo == id_tramo){
         console.table(this.cruceSQL.recordset[j])
+        
           this.cruces[this.aux] = this.cruceSQL.recordset[j];
           this.aux = this.aux + 1;
-          if(j > 3) return;
+          if(this.aux >= 3) return;
         }
     }
     if(this.aux == 0){

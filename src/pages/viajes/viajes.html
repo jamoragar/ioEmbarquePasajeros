@@ -37,12 +37,23 @@
  </ion-item>
 <h1 *ngIf="Viaje.destino != null">Seleccione uno de los siguientes tramos</h1>
  <ion-card *ngFor="let cruce of cruces; let i = index" (click)="seleccionTramo(cruce, Viaje.origen, Viaje.destino)">
-   <ion-card-content *ngIf="i < 3">
-     <ion-card-title>Fecha: {{cruce.horario_cruce | date :"dd/MM/yyyy 'Cruce:' h:mma ":"+0000"}}</ion-card-title>
-     <h2>{{Viaje.origen}} -> {{Viaje.destino}}</h2>
-     <h2>Presentación: {{cruce.horario_presentacion | date: 'h:mma ':'+0000'}}</h2>
-     <h3>Nave: {{cruce.nombre_nave}}</h3>
-   </ion-card-content>
+   <div *ngIf="Viaje.destino == 'Isla Magdalena'; then threeCards else twoCards"></div>
+   <ng-template #twoCards>
+    <ion-card-content *ngIf="i < 2">
+        <ion-card-title>Fecha: {{cruce.horario_cruce | date :"dd/MM/yyyy 'Cruce:' h:mma ":"+0000"}}</ion-card-title>
+        <h2>{{Viaje.origen}} -> {{Viaje.destino}}</h2>
+        <h2>Presentación: {{cruce.horario_presentacion | date: 'h:mma ':'+0000'}}</h2>
+        <h3>Nave: {{cruce.nombre_nave}}</h3>
+      </ion-card-content>
+   </ng-template>
+   <ng-template #threeCards>
+    <ion-card-content *ngIf="i < 3">
+      <ion-card-title>Fecha: {{cruce.horario_cruce | date :"dd/MM/yyyy 'Cruce:' h:mma ":"+0000"}}</ion-card-title>
+      <h2>{{Viaje.origen}} -> {{Viaje.destino}}</h2>
+      <h2>Presentación: {{cruce.horario_presentacion | date: 'h:mma ':'+0000'}}</h2>
+      <h3>Nave: {{cruce.nombre_nave}}</h3>
+    </ion-card-content>
+  </ng-template>
  </ion-card>
 
 </ion-list>

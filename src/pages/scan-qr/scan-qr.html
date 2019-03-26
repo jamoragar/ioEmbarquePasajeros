@@ -26,7 +26,7 @@
     </ion-card-content>
   </ion-card>
 
-  <div class="progress-wrapper">
+  <div class="progress-wrapper" (click)="refreshCount()">
     <div class="current" [ngStyle]="getOverlayStyle()">{{ current }}/{{ max }}</div>
 
     <round-progress
@@ -44,4 +44,5 @@
       [animation]="animation"
       [animationDelay]="animationDelay"></round-progress>
   </div>
+  <ion-label color="primary" style="text-align: center; font-size:medium;">Presione el contador para actualizarlo.</ion-label>
 </ion-content>

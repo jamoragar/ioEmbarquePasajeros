@@ -286,5 +286,19 @@ export class ScanQrPage {
     }
     return Math.trunc(valSeed);
   }
+  refreshCount(){
+    let id_cruce_tramo:any = {id_cruce:this.tramo.cruce.id_cruce, id_tramo:this.tramo.cruce.id_tramo};
+
+    this.restService.postCantPasajeros(id_cruce_tramo).then(dataSP =>{
+      if(dataSP['name'] === 'HttpErrorResponse'){
+        this.cantPasajeros = "Sin conexión";
+      }
+      else{
+        let resultado = dataSP[0].pasajeros;
+        this.cantPasajeros = resultado + ' de ' + this.tramo.cruce.cupo_pasajeros_maximo;
+        this.max = this.tramo.cruce.cupo_pasajeros_maximo;
+        this.current = resultado;
+      }
+    });  }
 
 }
